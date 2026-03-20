@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LC Venture Lab - Programma di Accelerazione Startup</title>
+    <title>Lake Como Venture Lab</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Caveat:wght@500;700&display=swap" rel="stylesheet">
@@ -597,7 +597,7 @@
 
         /* ============ LABS ============ */
         .labs-section {
-            background: var(--gradient-2);
+            background: var(--white);
         }
 
         .labs-grid {
@@ -648,7 +648,13 @@
 
         /* ============ MENTORS ============ */
         .mentors-section {
-            background: var(--off-white);
+            background: var(--white);
+        }
+
+        .mentors-section .mentor-card p {
+            font-size: 0.88rem;
+            color: var(--text-medium);
+            line-height: 1.6;
         }
 
         .mentors-grid {
@@ -693,7 +699,12 @@
 
         /* ============ TERRITORY VALUE ============ */
         .territory-section {
-            background: var(--white);
+            background: var(--off-white);
+        }
+
+        /* ============ STATS SECTION ============ */
+        .stats-section {
+            background: var(--off-white);
         }
 
         .stats-grid {
@@ -785,7 +796,11 @@
 
         /* ============ DISCOVER MORE ============ */
         .discover-section {
-            background: var(--off-white);
+            background: var(--white);
+        }
+
+        .benefits-list li {
+            background: var(--white);
         }
 
 
@@ -1012,6 +1027,107 @@
             }
         }
 
+        /* ============ SELECTION PANEL ============ */
+        .panel-section {
+            background: var(--off-white);
+        }
+
+        .panel-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 32px;
+            margin-top: 2.5rem;
+        }
+
+        .panel-card {
+            background: var(--white);
+            border-radius: 20px;
+            padding: 36px 28px 32px;
+            text-align: center;
+            border: 1px solid rgba(168, 200, 232, 0.25);
+            width: 190px;
+            transition: all 0.4s;
+            flex-shrink: 0;
+        }
+
+        .panel-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 16px 48px rgba(0,0,0,0.08);
+            border-color: var(--pastel-green);
+        }
+
+        .panel-avatar {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            margin: 0 auto 18px;
+            overflow: hidden;
+            border: 3px solid var(--pastel-green);
+            background: var(--pastel-green-light);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .panel-avatar img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 50%;
+        }
+
+        .panel-avatar svg {
+            width: 60%;
+            height: 60%;
+        }
+
+        .panel-card h4 {
+            font-size: 0.97rem;
+            font-weight: 700;
+            color: var(--dark-blue);
+            margin-bottom: 6px;
+            line-height: 1.3;
+        }
+
+        .panel-card p {
+            font-size: 0.80rem;
+            color: var(--text-light);
+            line-height: 1.45;
+        }
+
+        .panel-tag {
+            display: inline-block;
+            margin-top: 10px;
+            font-size: 0.68rem;
+            font-weight: 600;
+            letter-spacing: 0.8px;
+            text-transform: uppercase;
+            color: var(--dark-teal);
+            background: var(--pastel-green-light);
+            padding: 3px 10px;
+            border-radius: 20px;
+        }
+
+        @media (max-width: 768px) {
+            .panel-grid {
+                gap: 20px;
+            }
+            .panel-card {
+                width: 155px;
+                padding: 28px 16px 24px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .panel-grid {
+                gap: 16px;
+            }
+            .panel-card {
+                width: calc(50% - 8px);
+            }
+        }
+
         /* ============ ANIMATIONS ============ */
         .fade-in {
             opacity: 0;
@@ -1175,35 +1291,73 @@
         </div>
     </section>
 
-    <!-- ==================== MENTORS ==================== -->
-    <section class="mentors-section" id="mentor">
+    <!-- ==================== SELECTION PANEL ==================== -->
+    <section class="panel-section" id="panel">
         <div class="section-container">
-            <span class="section-label">ADVISORY BOARD</span>
-            <h2 class="section-title">L'Advisory Board</h2>
-            <p class="section-description">Un board di professionisti con esperienza diretta nel portare tecnologie deep tech dal laboratorio al mercato. Ti affiancano nelle decisioni che contano.</p>
+            <span class="section-label">Selection Panel</span>
+            <h2 class="section-title">Il Panel di Selezione</h2>
+            <p class="section-description">Le startup sono valutate da un panel indipendente di leader istituzionali, accademici e imprenditori con profonda conoscenza del territorio e dell'ecosistema deep tech.</p>
 
-            <div class="mentors-grid">
-                <div class="mentor-card fade-in">
-                    <div class="mentor-avatar">
-                        <svg viewBox="0 0 80 80"><circle cx="40" cy="40" r="36" fill="#1B4965" opacity="0.1"/><path d="M28 50V34l12-8 12 8v16H38v-10h-4v10H28z" fill="#1B4965"/><circle cx="40" cy="22" r="4" fill="#1B4965"/></svg>
+            <div class="panel-grid">
+
+                <!-- 1. Marco Campanari -->
+                <div class="panel-card fade-in">
+                    <div class="panel-avatar">
+                        <img src="panel-marco.png" alt="Marco Campanari">
                     </div>
-                    <h4>Tecnologia & Industrializzazione</h4>
-                    <p>CTO e direttori R&D con track record nella transizione da prototipo a produzione in serie. Competenze in meccatronica, MedTech e proprietà intellettuale.</p>
+                    <h4>Marco Campanari</h4>
+                    <p>Presidente di Confindustria Lecco e Sondrio</p>
+                    <span class="panel-tag">Confindustria</span>
                 </div>
-                <div class="mentor-card fade-in">
-                    <div class="mentor-avatar">
-                        <svg viewBox="0 0 80 80"><circle cx="40" cy="40" r="36" fill="#1B4965" opacity="0.1"/><path d="M24 52V32h8v20h-8zm12 0V24h8v28h-8zm12 0V36h8v16h-8z" fill="#1B4965"/></svg>
+
+                <!-- 2. Politecnico placeholder -->
+                <div class="panel-card fade-in">
+                    <div class="panel-avatar">
+                        <svg viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="40" cy="40" r="40" fill="#D4EDE1"/>
+                            <circle cx="40" cy="28" r="11" fill="#2C6E6A"/>
+                            <path d="M16 64c0-13.3 10.7-24 24-24s24 10.7 24 24" fill="#2C6E6A"/>
+                        </svg>
                     </div>
-                    <h4>Investimenti & Finanza</h4>
-                    <p>Venture capitalist e business angel specializzati in deep tech. Ti preparano alla raccolta: pitch, data room, term sheet e relazione con gli investitori.</p>
+                    <h4>Polo Territoriale di Lecco</h4>
+                    <p>Rappresentante del Politecnico di Milano</p>
+                    <span class="panel-tag">Politecnico di Milano</span>
                 </div>
-                <div class="mentor-card fade-in">
-                    <div class="mentor-avatar">
-                        <svg viewBox="0 0 80 80"><circle cx="40" cy="40" r="36" fill="#1B4965" opacity="0.1"/><path d="M20 44l10-14 8 8 12-16 10 14v12H20z" fill="#1B4965"/><circle cx="50" cy="26" r="4" fill="#1B4965"/></svg>
+
+                <!-- 3. Camera di Commercio placeholder -->
+                <div class="panel-card fade-in">
+                    <div class="panel-avatar" style="border-color: var(--pastel-blue);">
+                        <svg viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="40" cy="40" r="40" fill="#C8DDF0"/>
+                            <circle cx="40" cy="28" r="11" fill="#1B4965"/>
+                            <path d="M16 64c0-13.3 10.7-24 24-24s24 10.7 24 24" fill="#1B4965"/>
+                        </svg>
                     </div>
-                    <h4>Crescita & Go-to-Market</h4>
-                    <p>Founder che hanno scalato startup hardware da zero a milioni di fatturato. Ti guidano su pricing, primi clienti, canali di vendita B2B e strategia di scaling.</p>
+                    <h4>Camera di Commercio</h4>
+                    <p>Rappresentante della Camera di Commercio Como-Lecco</p>
+                    <span class="panel-tag" style="background: var(--pastel-blue-light); color: var(--dark-blue);">CCIAA Como-Lecco</span>
                 </div>
+
+                <!-- 4. Federica Pasini -->
+                <div class="panel-card fade-in">
+                    <div class="panel-avatar">
+                        <img src="panel-federica.png" alt="Federica Pasini">
+                    </div>
+                    <h4>Federica Pasini</h4>
+                    <p>Direttrice del programma e Founder</p>
+                    <span class="panel-tag">Lake Como Venture Lab</span>
+                </div>
+
+                <!-- 5. Emil Abirashid -->
+                <div class="panel-card fade-in">
+                    <div class="panel-avatar">
+                        <img src="panel-emil.png" alt="Emil Abirashid">
+                    </div>
+                    <h4>Emil Abirashid</h4>
+                    <p>Founder StartupBusiness · Media Partner</p>
+                    <span class="panel-tag">Media Partner</span>
+                </div>
+
             </div>
         </div>
     </section>
@@ -1266,34 +1420,70 @@
                 </div>
             </div>
 
-            <!-- IL VALORE DEL TERRITORIO (integrato) -->
-            <div style="margin-top: 4rem;">
-                <span class="section-label">I numeri</span>
-                <h2 class="section-title">Il valore del territorio</h2>
-                <p class="section-description">L'area di Lecco e Como rappresenta uno dei distretti industriali più dinamici d'Europa, con numeri che parlano da soli.</p>
+        </div>
+    </section>
 
-                <div class="stats-grid">
-                    <div class="stat-card fade-in">
-                        <div class="stat-icon">&#128200;</div>
-                        <div class="stat-number">34</div>
-                        <span class="stat-unit">miliardi di euro</span>
-                        <p class="stat-label">Valore aggiunto generato dal sistema produttivo del territorio</p>
-                        <span class="stat-year">Dati 2024</span>
+    <!-- ==================== MENTORS / ADVISORY BOARD ==================== -->
+    <section class="mentors-section" id="mentor">
+        <div class="section-container">
+            <span class="section-label">Advisory Board</span>
+            <h2 class="section-title">L'Advisory Board</h2>
+            <p class="section-description">Un board di professionisti con esperienza diretta nel portare tecnologie deep tech dal laboratorio al mercato. Ti affiancano nelle decisioni che contano.</p>
+
+            <div class="mentors-grid">
+                <div class="mentor-card fade-in">
+                    <div class="mentor-avatar">
+                        <svg viewBox="0 0 80 80"><circle cx="40" cy="40" r="36" fill="#1B4965" opacity="0.1"/><path d="M28 50V34l12-8 12 8v16H38v-10h-4v10H28z" fill="#1B4965"/><circle cx="40" cy="22" r="4" fill="#1B4965"/></svg>
                     </div>
-                    <div class="stat-card fade-in">
-                        <div class="stat-icon">&#9881;</div>
-                        <div class="stat-number">4.400</div>
-                        <span class="stat-unit">imprese attive</span>
-                        <p class="stat-label">Aziende operative nel settore della meccatronica e manifattura avanzata</p>
-                        <span class="stat-year">Dati 2024</span>
+                    <h4>Tecnologia & Industrializzazione</h4>
+                    <p>CTO e direttori R&D con track record nella transizione da prototipo a produzione in serie. Competenze in meccatronica, MedTech e proprietà intellettuale.</p>
+                </div>
+                <div class="mentor-card fade-in">
+                    <div class="mentor-avatar">
+                        <svg viewBox="0 0 80 80"><circle cx="40" cy="40" r="36" fill="#1B4965" opacity="0.1"/><path d="M24 52V32h8v20h-8zm12 0V24h8v28h-8zm12 0V36h8v16h-8z" fill="#1B4965"/></svg>
                     </div>
-                    <div class="stat-card fade-in">
-                        <div class="stat-icon">&#127758;</div>
-                        <div class="stat-number">13,4</div>
-                        <span class="stat-unit">miliardi di euro di export</span>
-                        <p class="stat-label">Valore delle esportazioni del distretto verso i mercati internazionali</p>
-                        <span class="stat-year">Dati 2024</span>
+                    <h4>Investimenti & Finanza</h4>
+                    <p>Venture capitalist e business angel specializzati in deep tech. Ti preparano alla raccolta: pitch, data room, term sheet e relazione con gli investitori.</p>
+                </div>
+                <div class="mentor-card fade-in">
+                    <div class="mentor-avatar">
+                        <svg viewBox="0 0 80 80"><circle cx="40" cy="40" r="36" fill="#1B4965" opacity="0.1"/><path d="M20 44l10-14 8 8 12-16 10 14v12H20z" fill="#1B4965"/><circle cx="50" cy="26" r="4" fill="#1B4965"/></svg>
                     </div>
+                    <h4>Crescita & Go-to-Market</h4>
+                    <p>Founder che hanno scalato startup hardware da zero a milioni di fatturato. Ti guidano su pricing, primi clienti, canali di vendita B2B e strategia di scaling.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== I NUMERI ==================== -->
+    <section class="stats-section" id="numeri">
+        <div class="section-container">
+            <span class="section-label">I numeri</span>
+            <h2 class="section-title">Il valore del territorio</h2>
+            <p class="section-description">L'area di Lecco e Como rappresenta uno dei distretti industriali più dinamici d'Europa, con numeri che parlano da soli.</p>
+
+            <div class="stats-grid">
+                <div class="stat-card fade-in">
+                    <div class="stat-icon">&#128200;</div>
+                    <div class="stat-number">34</div>
+                    <span class="stat-unit">miliardi di euro</span>
+                    <p class="stat-label">Valore aggiunto generato dal sistema produttivo del territorio</p>
+                    <span class="stat-year">Dati 2024</span>
+                </div>
+                <div class="stat-card fade-in">
+                    <div class="stat-icon">&#9881;</div>
+                    <div class="stat-number">4.400</div>
+                    <span class="stat-unit">imprese attive</span>
+                    <p class="stat-label">Aziende operative nel settore della meccatronica e manifattura avanzata</p>
+                    <span class="stat-year">Dati 2024</span>
+                </div>
+                <div class="stat-card fade-in">
+                    <div class="stat-icon">&#127758;</div>
+                    <div class="stat-number">13,4</div>
+                    <span class="stat-unit">miliardi di euro di export</span>
+                    <p class="stat-label">Valore delle esportazioni del distretto verso i mercati internazionali</p>
+                    <span class="stat-year">Dati 2024</span>
                 </div>
             </div>
         </div>
