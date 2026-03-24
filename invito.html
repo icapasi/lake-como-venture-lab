@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Invito — Lake Como Venture Lab</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;900&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg:      #2F6D6A;   /* teal scuro del PDF: rgb(47,109,106) */
+      --cream:   #FAF6F2;   /* testo display: rgb(250,246,242)      */
+      --white:   #FFFFFF;
+    }
+
+    html, body {
+      width: 100%; height: 100%;
+      background: var(--bg);
+      color: var(--white);
+      font-family: 'Inter', sans-serif;
+    }
+
+    /* ── Wrapper a proporzioni PDF (810:1012) ─────────────────────── */
+    .page {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem 1rem;
+    }
+
+    .card {
+      width: min(810px, 100%);
+      aspect-ratio: 810 / 1012;
+      background: var(--bg);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      position: relative;
+      padding: clamp(1.5rem, 4vw, 3.5rem) clamp(1rem, 6vw, 4rem);
+    }
+
+    /* ── INVITO ───────────────────────────────────────────────────── */
+    .invito-label {
+      font-family: 'Anton', sans-serif;
+      font-size: clamp(2.2rem, 7vw, 4rem);
+      color: var(--white);
+      letter-spacing: 0.04em;
+      text-align: center;
+      margin-bottom: 0.5em;
+    }
+
+    /* ── Separatore sottile centrato sotto INVITO ─────────────────── */
+    .divider-top {
+      width: 35%;
+      height: 1px;
+      background: var(--white);
+      opacity: 0.4;
+      margin-bottom: 1.2em;
+    }
+
+    /* ── Nasce ────────────────────────────────────────────────────── */
+    .nasce {
+      font-weight: 900;
+      font-size: clamp(0.95rem, 2.2vw, 1.4rem);
+      color: var(--white);
+      margin-bottom: 0.8em;
+      text-align: center;
+    }
+
+    /* ── Logo LCVL ────────────────────────────────────────────────── */
+    .logo-lcvl {
+      width: clamp(160px, 36%, 292px);
+      margin-bottom: 1.6em;
+    }
+    .logo-lcvl img { width: 100%; height: auto; display: block; }
+
+    /* ── Testo invito ─────────────────────────────────────────────── */
+    .body-text {
+      text-align: center;
+      font-size: clamp(0.85rem, 2vw, 1.25rem);
+      line-height: 1.65;
+      color: var(--white);
+      max-width: 78%;
+      margin-bottom: auto;
+    }
+    .body-text strong {
+      font-weight: 900;
+    }
+
+    /* ── Sezione data ─────────────────────────────────────────────── */
+    .date-section {
+      margin-top: 1.6em;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0;
+    }
+
+    .date-col {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 0 clamp(0.8rem, 3vw, 2.2rem);
+      position: relative;
+    }
+
+    /* Etichetta sopra il numero */
+    .date-label {
+      font-family: 'Anton', sans-serif;
+      font-size: clamp(0.55rem, 1.3vw, 0.85rem);
+      color: var(--cream);
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      margin-bottom: 0.15em;
+      opacity: 0;   /* nascosta: serve solo come spaziatore */
+    }
+
+    /* Numero grande con effetto ombra sfalsata */
+    .date-num {
+      font-family: 'Anton', sans-serif;
+      font-size: clamp(3rem, 9vw, 6rem);
+      line-height: 1;
+      position: relative;
+      color: var(--white);
+    }
+    .date-num::before {
+      display: none;
+    }
+
+    /* Divisori verticali tra le colonne */
+    .date-divider {
+      width: 1px;
+      height: clamp(3rem, 9vw, 6rem);
+      background: rgba(255,255,255,0.3);
+    }
+
+    /* ── ORE ──────────────────────────────────────────────────────── */
+    .ore {
+      font-family: 'Anton', sans-serif;
+      font-size: clamp(1.4rem, 3.5vw, 2.4rem);
+      color: var(--white);
+      margin-top: 0.5em;
+      letter-spacing: 0.04em;
+    }
+
+    /* ── Location ─────────────────────────────────────────────────── */
+    .location {
+      text-align: center;
+      font-size: clamp(0.75rem, 1.8vw, 1.1rem);
+      color: var(--white);
+      line-height: 1.7;
+      margin-top: 0.5em;
+    }
+
+    /* ── Bottone Registrati ─────────────────────────────────────── */
+    .btn-registrati {
+      display: inline-block;
+      margin-top: 1.4em;
+      padding: 0.7em 2.4em;
+      font-family: 'Inter', sans-serif;
+      font-weight: 900;
+      font-size: clamp(0.85rem, 1.8vw, 1.1rem);
+      color: var(--bg);
+      background: var(--white);
+      border: none;
+      border-radius: 50px;
+      text-decoration: none;
+      letter-spacing: 0.04em;
+      cursor: pointer;
+      transition: opacity 0.2s;
+    }
+    .btn-registrati:hover {
+      opacity: 0.85;
+    }
+
+    /* ── Separatore pieno-larghezza ───────────────────────────────── */
+    .divider-full {
+      width: 78%;
+      height: 1px;
+      background: rgba(255,255,255,0.3);
+      margin: 1.4em 0 1.2em;
+    }
+
+    /* ── Loghi partner ────────────────────────────────────────────── */
+    .logos {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: clamp(1.2rem, 4vw, 3rem);
+      flex-wrap: wrap;
+    }
+    .logos img {
+      height: clamp(28px, 5vw, 52px);
+      width: auto;
+      object-fit: contain;
+      filter: brightness(0) invert(1);
+    }
+    .logo-confindustria img {
+      filter: brightness(0) invert(1);
+    }
+
+    /* ── Responsive: su schermi molto piccoli togli aspect-ratio ──── */
+    @media (max-width: 480px) {
+      .card { aspect-ratio: unset; padding: 2rem 1.2rem 1.8rem; }
+      .body-text { max-width: 95%; }
+      .divider-full { width: 90%; }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <div class="card">
+
+      <!-- INVITO -->
+      <h1 class="invito-label">INVITO</h1>
+
+      <!-- Linea centrata -->
+      <div class="divider-top"></div>
+
+      <!-- Nasce -->
+      <p class="nasce">Nasce</p>
+
+      <!-- Logo Lake Como Venture Lab -->
+      <div class="logo-lcvl">
+        <img src="loghi/LakeComo_Logo_LCVL_White.png" alt="Lake Como Venture Lab">
+      </div>
+
+      <!-- Testo di invito -->
+      <p class="body-text">
+        <strong>Confindustria Lecco e Sondrio</strong> e
+        il <strong>Polo territoriale di Lecco&nbsp;– Politecnico di Milano</strong>,
+        insieme alla <strong>Camera di Commercio Como-Lecco</strong>,
+        hanno il piacere di invitarvi alla presentazione
+        del primo programma deeptech italiano dedicato
+        all'incubazione di startup in ambito Meccatronico e MedTech
+      </p>
+
+      <!-- DATA -->
+      <div class="date-section">
+        <div class="date-col">
+          <span class="date-num" data-val="01">01</span>
+        </div>
+        <div class="date-divider"></div>
+        <div class="date-col">
+          <span class="date-num" data-val="04">04</span>
+        </div>
+        <div class="date-divider"></div>
+        <div class="date-col">
+          <span class="date-num" data-val="26">26</span>
+        </div>
+      </div>
+
+      <!-- ORE -->
+      <p class="ore">ORE 11:00</p>
+
+      <!-- Location -->
+      <div class="location">
+        <p>Polo territoriale di Lecco – Politecnico di Milano</p>
+        <p>Via Previati 1/C Lecco</p>
+      </div>
+
+      <!-- Bottone Registrati -->
+      <a href="https://www.f6s.com/lake-como-venture-lab" target="_blank" rel="noopener" class="btn-registrati">Registrati</a>
+
+      <!-- Separatore -->
+      <div class="divider-full"></div>
+
+      <!-- Loghi -->
+      <div class="logos">
+        <img class="logo-confindustria" src="images/confindustrials-logo.png" alt="Confindustria Lecco e Sondrio">
+        <img src="images/polimi-logo.png" alt="Politecnico di Milano">
+        <img src="images/CCIAA_ComoLecco_Logo-menu.png" alt="Camera di Commercio Como-Lecco">
+      </div>
+
+    </div>
+  </div>
+</body>
+</html>
