@@ -1,0 +1,4 @@
+_assets/
+.DS_Store
+.claude/
+server.py
