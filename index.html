@@ -1040,11 +1040,13 @@
         }
 
         .panel-grid {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
             gap: 32px;
             margin-top: 2.5rem;
+            max-width: 720px;
+            margin-left: auto;
+            margin-right: auto;
         }
 
         .panel-card {
@@ -1053,9 +1055,15 @@
             padding: 36px 28px 32px;
             text-align: center;
             border: 1px solid rgba(168, 200, 232, 0.25);
-            width: 190px;
             transition: all 0.4s;
-            flex-shrink: 0;
+        }
+
+        .panel-card .panel-logo {
+            margin-top: 10px;
+            height: 28px;
+            width: auto;
+            max-width: 100%;
+            object-fit: contain;
         }
 
         .panel-card:hover {
@@ -1118,20 +1126,18 @@
 
         @media (max-width: 768px) {
             .panel-grid {
+                grid-template-columns: repeat(3, 1fr);
                 gap: 20px;
             }
             .panel-card {
-                width: 155px;
                 padding: 28px 16px 24px;
             }
         }
 
         @media (max-width: 480px) {
             .panel-grid {
+                grid-template-columns: repeat(2, 1fr);
                 gap: 16px;
-            }
-            .panel-card {
-                width: calc(50% - 8px);
             }
         }
 
@@ -1314,7 +1320,7 @@
                     </div>
                     <h4>Marco Campanari</h4>
                     <p>Presidente di Confindustria Lecco e Sondrio</p>
-                    <span class="panel-tag">Confindustria</span>
+                    <img src="images/confindustrials-logo.png" alt="Confindustria Lecco e Sondrio" class="panel-logo">
                 </div>
 
                 <!-- 2. Politecnico placeholder -->
@@ -1338,7 +1344,7 @@
                     </div>
                     <h4>Ezio Vergani</h4>
                     <p>Presidente della Camera di Commercio Como-Lecco</p>
-                    <img src="images/CCIAA_ComoLecco_Logo-menu.png" alt="Camera di Commercio Como-Lecco" style="margin-top: 10px; height: 32px; width: auto;">
+                    <img src="images/CCIAA_ComoLecco_Logo-menu.png" alt="Camera di Commercio Como-Lecco" class="panel-logo">
                 </div>
 
                 <!-- 4. Emil Abirashid -->
@@ -1348,7 +1354,7 @@
                     </div>
                     <h4>Emil Abirashid</h4>
                     <p>Founder StartupBusiness · Media Partner</p>
-                    <span class="panel-tag">Media Partner</span>
+                    <img src="images/Startupbusiness_Logo_Full_Color_Positive_.svg" alt="StartupBusiness" class="panel-logo">
                 </div>
 
                 <!-- 5. Federica Biancon -->
@@ -1357,7 +1363,7 @@
                         <img src="images/panel-federica-biancon.jpeg" alt="Federica Biancon">
                     </div>
                     <h4>Federica Biancon</h4>
-                    <p>COO PhotonPath, ex Investment Manager PoliHub</p>
+                    <p>COO e co-founder PhotonPath, ex Investment Manager PoliHub</p>
                     <span class="panel-tag">Deep Tech</span>
                 </div>
 
