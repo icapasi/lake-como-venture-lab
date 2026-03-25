@@ -600,50 +600,60 @@
             background: var(--white);
         }
 
-        .labs-grid {
+        .labs-content {
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 24px;
+            grid-template-columns: 1fr 1fr;
+            gap: 48px;
+            align-items: center;
             margin-top: 2rem;
         }
 
-        .lab-card {
+        .labs-image {
             border-radius: 16px;
             overflow: hidden;
-            background: var(--white);
-            border: 1px solid rgba(168, 200, 232, 0.2);
-            transition: all 0.3s;
         }
 
-        .lab-card:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 12px 40px rgba(0,0,0,0.08);
-        }
-
-        .lab-img {
+        .labs-image img {
             width: 100%;
-            height: 200px;
-            background: var(--gradient-1);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 3rem;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 16px;
         }
 
-        .lab-card-content {
-            padding: 20px;
-        }
-
-        .lab-card-content h3 {
-            font-size: 1rem;
+        .labs-text h3 {
+            font-size: 1.3rem;
             font-weight: 700;
             color: var(--dark-blue);
-            margin-bottom: 6px;
+            margin-bottom: 16px;
         }
 
-        .lab-card-content p {
-            font-size: 0.85rem;
-            color: var(--text-light);
+        .labs-text p {
+            font-size: 1rem;
+            color: var(--text-medium);
+            line-height: 1.8;
+            margin-bottom: 16px;
+        }
+
+        .labs-text ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .labs-text ul li {
+            padding: 8px 0;
+            padding-left: 28px;
+            position: relative;
+            font-size: 0.95rem;
+            color: var(--text-medium);
+            line-height: 1.6;
+        }
+
+        .labs-text ul li::before {
+            content: "\2713";
+            position: absolute;
+            left: 0;
+            color: var(--teal);
+            font-weight: 700;
         }
 
         /* ============ MENTORS ============ */
@@ -992,7 +1002,7 @@
                 padding: 100px 1.5rem 50px;
             }
 
-            .labs-grid,
+            .labs-content,
             .discover-grid {
                 grid-template-columns: 1fr;
             }
@@ -1427,30 +1437,22 @@
     <section class="labs-section" id="laboratori">
         <div class="section-container">
             <span class="section-label">I laboratori</span>
-            <h2 class="section-title">I laboratori del Politecnico di Milano - Polo Territoriale di Lecco</h2>
-            <p class="section-description">Accesso diretto a tecnologie e laboratori di testing specializzati per accompagnare le startup dal prototipo alla produzione.</p>
+            <h2 class="section-title">L'intera rete di laboratori del Politecnico di Milano</h2>
+            <p class="section-description">Non solo il Polo di Lecco: le startup selezionate avranno accesso ai laboratori di tutto il sistema Politecnico per sviluppare e validare i propri prototipi.</p>
 
-            <div class="labs-grid">
-                <div class="lab-card fade-in">
-                    <div class="lab-img">&#128300;</div>
-                    <div class="lab-card-content">
-                        <h3>Laboratorio Materiali</h3>
-                        <p>Testing e caratterizzazione dei materiali avanzati</p>
-                    </div>
+            <div class="labs-content fade-in">
+                <div class="labs-image">
+                    <img src="images/laboratori.jpg" alt="Laboratori del Politecnico di Milano">
                 </div>
-                <div class="lab-card fade-in">
-                    <div class="lab-img" style="background: linear-gradient(135deg, var(--pastel-blue-light), var(--pastel-green-light));">&#9881;</div>
-                    <div class="lab-card-content">
-                        <h3>Laboratorio Meccanica</h3>
-                        <p>Prototipazione e testing meccanico di precisione</p>
-                    </div>
-                </div>
-                <div class="lab-card fade-in">
-                    <div class="lab-img" style="background: linear-gradient(135deg, var(--pastel-green), var(--pastel-blue));">&#129658;</div>
-                    <div class="lab-card-content">
-                        <h3>Laboratorio Biomedico</h3>
-                        <p>Sviluppo e validazione di dispositivi medicali</p>
-                    </div>
+                <div class="labs-text">
+                    <h3>Dal laboratorio al prodotto</h3>
+                    <p>Il Politecnico di Milano mette a disposizione la sua intera rete di laboratori di ricerca e infrastrutture sperimentali per accompagnare ogni startup dalla fase di prototipazione alla validazione tecnica.</p>
+                    <ul>
+                        <li>Accesso ai laboratori del Polo Territoriale di Lecco e dell'intero network Politecnico</li>
+                        <li>Strumentazione avanzata per testing, caratterizzazione materiali e prototipazione</li>
+                        <li>Tutoraggio scientifico con ricercatori e dottorandi specializzati</li>
+                        <li>Supporto nella validazione di proof-of-concept e sviluppo pre-industriale</li>
+                    </ul>
                 </div>
             </div>
         </div>
