@@ -225,19 +225,24 @@
         .partners-logos {
             display: flex;
             align-items: center;
-            justify-content: flex-start;
-            gap: 24px;
+            justify-content: space-between;
+            width: 100%;
         }
 
         .partner-logo-wrap {
             display: flex;
             align-items: center;
             justify-content: center;
+            height: 55px;
+        }
+
+        .partner-logo-wrap:last-child {
             height: 40px;
+            margin-left: auto;
         }
 
         .partner-logo-wrap img {
-            height: 40px;
+            height: 100%;
             width: auto;
             object-fit: contain;
         }
