@@ -205,6 +205,46 @@
             font-weight: 400;
         }
 
+        .partners-box {
+            margin-top: 2rem;
+            background: var(--dark-blue);
+            border-radius: 16px;
+            padding: 32px 48px;
+            max-width: 750px;
+        }
+
+        .partners-box-text {
+            color: rgba(255,255,255,0.85);
+            font-size: 0.85rem;
+            margin-bottom: 24px;
+            text-align: center;
+        }
+
+        .partners-logos {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 48px;
+        }
+
+        .partner-logo-wrap {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 80px;
+            height: 60px;
+        }
+
+        .partner-logo-wrap img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+        }
+
+        .partner-logo-wide {
+            width: 160px;
+        }
+
         .hero-partners {
             display: flex;
             align-items: flex-start;
@@ -989,6 +1029,28 @@
             fill: var(--dark-blue);
         }
 
+        @media (max-width: 768px) {
+            .partners-box {
+                padding: 24px 20px;
+            }
+
+            .partners-box-text {
+                white-space: normal;
+                font-size: 0.8rem;
+            }
+
+            .partners-logos {
+                flex-direction: column;
+                gap: 24px;
+            }
+
+            .partner-logo-wrap,
+            .partner-logo-wide {
+                width: 140px;
+                height: 50px;
+            }
+        }
+
         /* ============ MOBILE ============ */
         @media (max-width: 768px) {
             .navbar {
@@ -1199,12 +1261,12 @@
             <a href="https://www.f6s.com/lake-como-venture-lab" target="_blank" class="navbar-cta" style="font-size: 1rem; padding: 14px 32px;">
                 Applica &rarr;
             </a>
-            <div style="margin-top: 2rem; background: var(--dark-blue); border-radius: 16px; padding: 24px 32px; max-width: 700px;">
-                <p style="color: rgba(255,255,255,0.85); font-size: 0.85rem; margin-bottom: 16px; text-align: center; white-space: nowrap;">Un'iniziativa di Confindustria Lecco e Sondrio in partnership con il Polo Territoriale di Lecco – Politecnico di Milano e con la Camera di Commercio di Como-Lecco.</p>
-                <div style="display: flex; align-items: center; justify-content: center; gap: 32px;">
-                    <img src="images/confindustria-logo-white.png" alt="Confindustria Lecco e Sondrio" style="height: 50px; width: auto; object-fit: contain;">
-                    <img src="images/polimi-logo-white.png" alt="Politecnico di Milano" style="height: 50px; width: auto; object-fit: contain;">
-                    <img src="images/cciaa-logo-white.png" alt="Camera di Commercio Como-Lecco" style="height: 50px; width: auto; object-fit: contain;">
+            <div class="partners-box">
+                <p class="partners-box-text">Un'iniziativa di Confindustria Lecco e Sondrio in partnership con il Polo Territoriale di Lecco – Politecnico di Milano e con la Camera di Commercio di Como-Lecco.</p>
+                <div class="partners-logos">
+                    <div class="partner-logo-wrap"><img src="images/confindustria-logo-white.png" alt="Confindustria Lecco e Sondrio"></div>
+                    <div class="partner-logo-wrap"><img src="images/polimi-logo-white.png" alt="Politecnico di Milano"></div>
+                    <div class="partner-logo-wrap partner-logo-wide"><img src="images/cciaa-logo-white.png" alt="Camera di Commercio Como-Lecco"></div>
                 </div>
             </div>
         </div>
