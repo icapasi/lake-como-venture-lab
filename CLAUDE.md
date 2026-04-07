@@ -47,6 +47,16 @@ Single file: `index.html` contains all HTML, CSS, and JS inline. No external fra
 
 **External dependencies**: Google Fonts only (Inter + Caveat), loaded via `<link>` in `<head>`.
 
+## Bilingual Site — IMPORTANT RULE
+
+The site exists in **two languages**:
+- Italian: `index.html` (root)
+- English: `en/index.html`
+
+**ANY content change (text, images, names, roles, sections) MUST be applied to BOTH files.**
+Always update `index.html` AND `en/index.html` in the same commit, unless explicitly told otherwise.
+Image paths in `en/index.html` use `../images/` (one level up), while `index.html` uses `images/`.
+
 ## Key Details
 
 - Application link: `https://www.f6s.com/lake-como-venture-lab` (used in navbar CTA, hero CTA, and final CTA)
