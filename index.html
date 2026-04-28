@@ -1755,5 +1755,81 @@
         document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
     </script>
 
+    <!-- ==================== COOKIE BANNER + GA4 ==================== -->
+    <style>
+        #cookie-banner {
+            position: fixed;
+            bottom: 0; left: 0; right: 0;
+            background: #1a2a3a;
+            color: rgba(255,255,255,0.85);
+            padding: 16px 24px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 12px;
+            z-index: 9999;
+            font-family: 'Inter', sans-serif;
+            font-size: 0.85rem;
+            box-shadow: 0 -2px 16px rgba(0,0,0,0.2);
+        }
+        #cookie-banner p { margin: 0; flex: 1; min-width: 200px; }
+        #cookie-banner a { color: var(--pastel-green); text-decoration: underline; }
+        .cookie-btn {
+            padding: 8px 20px;
+            border-radius: 6px;
+            border: none;
+            cursor: pointer;
+            font-size: 0.85rem;
+            font-weight: 600;
+            transition: opacity 0.2s;
+        }
+        .cookie-btn:hover { opacity: 0.85; }
+        #cookie-accept { background: #B8D8C8; color: #1a2a3a; }
+        #cookie-reject { background: transparent; color: rgba(255,255,255,0.6); border: 1px solid rgba(255,255,255,0.3); }
+    </style>
+
+    <div id="cookie-banner" style="display:none;">
+        <p>Utilizziamo cookie analitici (Google Analytics) per migliorare l'esperienza sul sito. Puoi accettare o rifiutare.</p>
+        <div style="display:flex; gap:8px;">
+            <button class="cookie-btn" id="cookie-reject">Rifiuta</button>
+            <button class="cookie-btn" id="cookie-accept">Accetta</button>
+        </div>
+    </div>
+
+    <script>
+        (function() {
+            var consent = localStorage.getItem('ga-consent');
+            if (consent === 'granted') {
+                loadGA();
+            } else if (consent === null) {
+                document.getElementById('cookie-banner').style.display = 'flex';
+            }
+
+            document.getElementById('cookie-accept').addEventListener('click', function() {
+                localStorage.setItem('ga-consent', 'granted');
+                document.getElementById('cookie-banner').style.display = 'none';
+                loadGA();
+            });
+
+            document.getElementById('cookie-reject').addEventListener('click', function() {
+                localStorage.setItem('ga-consent', 'denied');
+                document.getElementById('cookie-banner').style.display = 'none';
+            });
+
+            function loadGA() {
+                var s = document.createElement('script');
+                s.async = true;
+                s.src = 'https://www.googletagmanager.com/gtag/js?id=G-EGFV44WLXZ';
+                document.head.appendChild(s);
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){ dataLayer.push(arguments); }
+                window.gtag = gtag;
+                gtag('js', new Date());
+                gtag('config', 'G-EGFV44WLXZ');
+            }
+        })();
+    </script>
+
 </body>
 </html>
