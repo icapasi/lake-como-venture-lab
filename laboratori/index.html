@@ -1,0 +1,1139 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="../loghi/LakeComo_Logo_Cerchio_White_LCVL.png">
+    <title>Lake Como Venture Lab: i laboratori</title>
+    <meta name="description" content="I laboratori di ricerca del Polo territoriale di Lecco del Politecnico di Milano a disposizione delle startup del Lake Como Venture Lab: robotica collaborativa, spacetech, sensori biomedicali, human performance e altro.">
+    <meta property="og:title" content="Lake Como Venture Lab: i laboratori">
+    <meta property="og:description" content="Sei laboratori del Politecnico di Milano, Polo di Lecco, a fianco delle startup Meccatronica e MedTech del programma.">
+    <meta property="og:image" content="https://lakecomoventurelab.com/images/laboratori.jpg">
+    <meta property="og:url" content="https://lakecomoventurelab.com/laboratori/">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://lakecomoventurelab.com/images/laboratori.jpg">
+    <link rel="canonical" href="https://lakecomoventurelab.com/laboratori/">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Caveat:wght@500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --pastel-green: #B8D8C8;
+            --pastel-green-light: #D4EDE1;
+            --pastel-green-dark: #7AB09A;
+            --pastel-blue: #A8C8E8;
+            --pastel-blue-light: #C8DDF0;
+            --pastel-blue-dark: #6A9FCC;
+            --dark-teal: #2C6E6A;
+            --dark-blue: #1B4965;
+            --text-dark: #1a2a3a;
+            --text-medium: #3d5a6e;
+            --text-light: #6b8599;
+            --white: #ffffff;
+            --off-white: #f5f9f7;
+            --gradient-1: linear-gradient(135deg, #B8D8C8 0%, #A8C8E8 100%);
+            --gradient-2: linear-gradient(135deg, #D4EDE1 0%, #C8DDF0 100%);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            color: var(--text-dark);
+            line-height: 1.6;
+            background: var(--white);
+        }
+
+        /* ============ NAVBAR ============ */
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(168, 200, 232, 0.3);
+            padding: 0 2rem;
+            height: 70px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            transition: box-shadow 0.3s;
+        }
+
+        .navbar.scrolled {
+            box-shadow: 0 2px 20px rgba(0,0,0,0.08);
+        }
+
+        .navbar-logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            text-decoration: none;
+        }
+
+        .navbar-subtitle {
+            font-size: 0.65rem;
+            color: #204863;
+            line-height: 1.4;
+            text-align: center;
+            flex: 1;
+            max-width: 500px;
+            padding: 0 1rem;
+        }
+
+        .navbar-cta {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: var(--dark-teal);
+            color: white;
+            padding: 10px 24px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: all 0.3s;
+            border: none;
+            cursor: pointer;
+        }
+
+        .navbar-cta:hover {
+            background: var(--dark-blue);
+            transform: translateY(-1px);
+            box-shadow: 0 4px 15px rgba(44, 110, 106, 0.3);
+        }
+
+        .lang-switch {
+            font-size: 0.8rem;
+            font-weight: 600;
+            color: var(--dark-teal);
+            text-decoration: none;
+            padding: 4px 12px;
+            border: 1px solid var(--pastel-green);
+            border-radius: 20px;
+            transition: all 0.3s;
+            white-space: nowrap;
+            margin-right: 4px;
+        }
+
+        .lang-switch:hover {
+            background: var(--pastel-green-light);
+        }
+
+        /* ============ HERO ============ */
+        .hero {
+            display: flex;
+            align-items: center;
+            padding: 140px 2rem 80px;
+            background: var(--gradient-2);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -20%;
+            width: 80%;
+            height: 200%;
+            background: radial-gradient(ellipse, rgba(184, 216, 200, 0.4) 0%, transparent 70%);
+            pointer-events: none;
+        }
+
+        .hero::after {
+            content: '';
+            position: absolute;
+            bottom: -30%;
+            left: -10%;
+            width: 60%;
+            height: 120%;
+            background: radial-gradient(ellipse, rgba(168, 200, 232, 0.3) 0%, transparent 70%);
+            pointer-events: none;
+        }
+
+        .hero-content {
+            max-width: 1100px;
+            margin: 0 auto;
+            width: 100%;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero h1 {
+            font-size: clamp(2rem, 4.5vw, 3.2rem);
+            font-weight: 800;
+            color: var(--dark-blue);
+            line-height: 1.2;
+            margin-bottom: 1.2rem;
+            max-width: 800px;
+        }
+
+        .hero-sub {
+            font-size: 1.15rem;
+            color: var(--text-medium);
+            margin-bottom: 2rem;
+            max-width: 800px;
+            font-weight: 400;
+        }
+
+        .hero-ctas {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        .hero-ctas .navbar-cta {
+            font-size: 1rem;
+            padding: 14px 32px;
+        }
+
+        .navbar-cta.outline {
+            background: transparent;
+            color: var(--dark-teal);
+            box-shadow: inset 0 0 0 1.5px var(--dark-teal);
+        }
+
+        .navbar-cta.outline:hover {
+            background: var(--dark-teal);
+            color: white;
+        }
+
+        .hero-stats {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            margin-top: 3rem;
+            max-width: 760px;
+        }
+
+        .hero-stat {
+            border-top: 2px solid var(--pastel-green-dark);
+            padding-top: 14px;
+        }
+
+        .hero-stat b {
+            display: block;
+            font-size: clamp(2.2rem, 4vw, 3rem);
+            font-weight: 800;
+            color: var(--dark-blue);
+            line-height: 1.1;
+        }
+
+        .hero-stat span {
+            font-size: 0.92rem;
+            color: var(--text-medium);
+        }
+
+        /* ============ SECTION SHARED ============ */
+        section {
+            padding: 80px 2rem;
+        }
+
+        .section-container {
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .section-label {
+            display: inline-block;
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--dark-teal);
+            margin-bottom: 12px;
+            background: var(--pastel-green-light);
+            padding: 6px 16px;
+            border-radius: 30px;
+        }
+
+        .section-title {
+            font-size: clamp(1.6rem, 3vw, 2.4rem);
+            font-weight: 800;
+            color: var(--dark-blue);
+            margin-bottom: 1rem;
+            line-height: 1.2;
+        }
+
+        .section-description {
+            font-size: 1.05rem;
+            color: var(--text-medium);
+            max-width: 900px;
+            line-height: 1.7;
+            margin-bottom: 2.5rem;
+        }
+
+        /* ============ INTRO (Ricerca e industria) ============ */
+        .labs-section {
+            background: var(--white);
+        }
+
+        .labs-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 48px;
+            align-items: center;
+        }
+
+        .labs-image {
+            border-radius: 16px;
+            overflow: hidden;
+        }
+
+        .labs-image img {
+            display: block;
+            width: 100%;
+            aspect-ratio: 4 / 3;
+            object-fit: cover;
+            border-radius: 16px;
+        }
+
+        .labs-text p {
+            font-size: 1rem;
+            color: var(--text-medium);
+            line-height: 1.8;
+            margin-bottom: 16px;
+        }
+
+        /* ============ LAB CARDS ============ */
+        .lab-list-section {
+            background: var(--off-white);
+        }
+
+        .lab-filters {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+            margin: 0.5rem 0 2rem;
+        }
+
+        .lab-filters button {
+            font: inherit;
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--dark-teal);
+            background: var(--white);
+            border: 1px solid var(--pastel-green);
+            border-radius: 20px;
+            padding: 8px 18px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .lab-filters button:hover {
+            background: var(--pastel-green-light);
+        }
+
+        .lab-filters button[aria-pressed="true"] {
+            background: var(--dark-teal);
+            border-color: var(--dark-teal);
+            color: white;
+        }
+
+        .lab-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+        }
+
+        .lab-card {
+            background: var(--white);
+            border: 1px solid rgba(168, 200, 232, 0.3);
+            border-radius: 16px;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            transition: all 0.3s;
+        }
+
+        .lab-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 40px rgba(0,0,0,0.06);
+            border-color: var(--pastel-green);
+        }
+
+        .lab-card[hidden] {
+            display: none;
+        }
+
+        .lab-media {
+            display: block;
+            position: relative;
+            width: 100%;
+            aspect-ratio: 16 / 9;
+            padding: 0;
+            border: 0;
+            background: var(--pastel-blue-light);
+            overflow: hidden;
+            cursor: default;
+        }
+
+        .lab-media img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.4s;
+        }
+
+        .lab-media .play {
+            display: none;
+        }
+
+        .lab-media.has-video {
+            cursor: pointer;
+        }
+
+        .lab-media.has-video .play {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: absolute;
+            right: 14px;
+            bottom: 14px;
+            width: 52px;
+            height: 52px;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.92);
+            box-shadow: 0 6px 18px rgba(0,0,0,0.25);
+        }
+
+        .lab-media.has-video .play svg {
+            width: 22px;
+            height: 22px;
+            fill: var(--dark-teal);
+            margin-left: 3px;
+        }
+
+        .lab-media.has-video:hover img {
+            transform: scale(1.04);
+        }
+
+        .lab-media:focus-visible {
+            outline: 3px solid var(--dark-teal);
+            outline-offset: -3px;
+        }
+
+        .lab-body {
+            padding: 24px 24px 22px;
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+        }
+
+        .lab-card h3 {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--dark-blue);
+            margin-bottom: 4px;
+        }
+
+        .lab-area {
+            font-size: 0.88rem;
+            font-weight: 600;
+            color: var(--dark-teal);
+            margin-bottom: 12px;
+        }
+
+        .lab-tags {
+            display: flex;
+            gap: 6px;
+            flex-wrap: wrap;
+            margin-bottom: 14px;
+        }
+
+        .lab-tag {
+            font-size: 0.68rem;
+            font-weight: 600;
+            letter-spacing: 0.8px;
+            text-transform: uppercase;
+            padding: 3px 10px;
+            border-radius: 20px;
+        }
+
+        .lab-tag.mecc {
+            color: var(--dark-teal);
+            background: var(--pastel-green-light);
+        }
+
+        .lab-tag.med {
+            color: var(--dark-blue);
+            background: var(--pastel-blue-light);
+        }
+
+        .lab-card p {
+            font-size: 0.92rem;
+            color: var(--text-medium);
+            line-height: 1.6;
+            margin-bottom: 14px;
+        }
+
+        .lab-people {
+            font-size: 0.82rem;
+            color: var(--text-light);
+            border-top: 1px solid rgba(168, 200, 232, 0.3);
+            padding-top: 12px;
+            margin-top: auto;
+        }
+
+        .lab-note {
+            margin-top: 2rem;
+            font-size: 0.95rem;
+            color: var(--text-medium);
+        }
+
+        .lab-note a {
+            color: var(--dark-teal);
+            font-weight: 600;
+        }
+
+        /* ============ SYNERGY ============ */
+        .synergy-section {
+            background: var(--white);
+        }
+
+        .offer-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 24px;
+        }
+
+        .offer-card {
+            background: var(--white);
+            border: 1px solid rgba(168, 200, 232, 0.3);
+            border-radius: 16px;
+            padding: 32px 28px;
+            transition: all 0.3s;
+        }
+
+        .offer-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 40px rgba(0,0,0,0.06);
+            border-color: var(--pastel-green);
+        }
+
+        .offer-card h3 {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--dark-blue);
+            margin-bottom: 8px;
+        }
+
+        .offer-card p {
+            font-size: 0.92rem;
+            color: var(--text-medium);
+            line-height: 1.6;
+        }
+
+        /* ============ CTA FINAL ============ */
+        .cta-final {
+            background: var(--dark-blue);
+            padding: 80px 2rem;
+            text-align: center;
+            color: white;
+        }
+
+        .cta-final h2 {
+            font-size: 2rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+        }
+
+        .cta-final p {
+            font-size: 1.05rem;
+            opacity: 0.85;
+            margin-bottom: 2rem;
+            max-width: 500px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .cta-final .btn-cta {
+            background: var(--pastel-green);
+            color: var(--dark-blue);
+            padding: 14px 36px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.05rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.3s;
+        }
+
+        .cta-final .btn-cta:hover {
+            background: var(--white);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 30px rgba(0,0,0,0.2);
+        }
+
+        .cta-final .cta-press {
+            margin: 2rem auto 0;
+            font-size: 0.95rem;
+        }
+
+        .cta-final .cta-press a {
+            color: var(--pastel-green);
+            font-weight: 600;
+        }
+
+        /* ============ VIDEO LIGHTBOX ============ */
+        .lab-lightbox {
+            position: fixed;
+            inset: 0;
+            z-index: 2000;
+            background: rgba(15, 30, 45, 0.9);
+            display: none;
+            align-items: center;
+            justify-content: center;
+            padding: 16px;
+        }
+
+        .lab-lightbox.open {
+            display: flex;
+        }
+
+        .lab-lightbox-box {
+            width: min(1000px, 100%);
+            aspect-ratio: 16 / 9;
+            background: #000;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.4);
+        }
+
+        .lab-lightbox-box iframe,
+        .lab-lightbox-box video {
+            display: block;
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+
+        .lab-lightbox-close {
+            position: absolute;
+            top: 14px;
+            right: 18px;
+            width: 44px;
+            height: 44px;
+            border: 0;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.1);
+            color: white;
+            font-size: 1.8rem;
+            line-height: 1;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .lab-lightbox-close:hover {
+            background: rgba(255,255,255,0.2);
+        }
+
+        /* ============ FOOTER ============ */
+        footer {
+            background: var(--text-dark);
+            color: rgba(255,255,255,0.7);
+            padding: 40px 2rem;
+        }
+
+        .footer-content {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .footer-left {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+        }
+
+        .footer-left p {
+            font-size: 0.82rem;
+        }
+
+        .footer-socials {
+            display: flex;
+            gap: 12px;
+        }
+
+        .footer-socials a {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+
+        .footer-socials a:hover {
+            background: var(--pastel-green);
+        }
+
+        .footer-socials a svg {
+            width: 18px;
+            height: 18px;
+            fill: white;
+        }
+
+        .footer-socials a:hover svg {
+            fill: var(--dark-blue);
+        }
+
+        .footer-socials a img {
+            width: 18px;
+            height: 18px;
+            object-fit: contain;
+        }
+
+        /* ============ MOBILE ============ */
+        @media (max-width: 900px) {
+            .lab-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .navbar {
+                padding: 0 1rem;
+            }
+
+            .navbar-subtitle {
+                display: none;
+            }
+
+            .hero {
+                padding: 110px 1.5rem 50px;
+            }
+
+            .labs-content,
+            .offer-grid {
+                grid-template-columns: 1fr;
+            }
+
+            section {
+                padding: 60px 1.5rem;
+            }
+
+            .cta-final {
+                padding: 60px 1.5rem;
+            }
+
+            .cta-final h2 {
+                font-size: 1.6rem;
+            }
+
+            .footer-content {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .lab-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .hero-stats {
+                grid-template-columns: 1fr;
+                gap: 16px;
+            }
+        }
+
+        /* ============ ANIMATIONS ============ */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s, transform 0.6s;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ==================== NAVBAR ==================== -->
+    <nav class="navbar" id="navbar">
+        <a href="../" class="navbar-logo">
+            <img src="../loghi/LakeComo_Logo_LCVL.png" alt="Lake Como Venture Lab" style="height: 63px; width: auto;">
+        </a>
+        <span class="navbar-subtitle">Un'iniziativa di Confindustria Lecco e Sondrio in partnership con il Polo Territoriale di Lecco – Politecnico di Milano e con la Camera di Commercio di Como-Lecco.</span>
+        <a href="../en/" class="lang-switch">EN</a>
+        <a href="https://app.notion.com/p/392c2bbbd80d80fd9c62ebd875db5631?pvs=106" target="_blank" rel="noopener" class="navbar-cta" onclick="if(window.gtag)gtag('event','click_contattaci',{button_position:'navbar'});">Contattaci &rarr;</a>
+    </nav>
+
+    <!-- ==================== HERO ==================== -->
+    <section class="hero" id="hero">
+        <div class="hero-content">
+            <span class="section-label">I laboratori · Politecnico di Milano, Polo di Lecco</span>
+            <h1>Dove l'idea deep tech diventa realtà.</h1>
+            <p class="hero-sub">Le startup del Lake Como Venture Lab lavorano a fianco dei laboratori di ricerca del Polo territoriale di Lecco del Politecnico di Milano: strumentazione avanzata, ricercatori specializzati e competenze che si combinano tra loro per accelerare progettazione, prototipazione e validazione.</p>
+            <div class="hero-ctas">
+                <a href="#laboratori" class="navbar-cta">Esplora i laboratori</a>
+                <a href="https://app.notion.com/p/392c2bbbd80d80fd9c62ebd875db5631?pvs=106" target="_blank" rel="noopener" class="navbar-cta outline" onclick="if(window.gtag)gtag('event','click_contattaci',{button_position:'laboratori_hero'});">Contattaci &rarr;</a>
+            </div>
+            <div class="hero-stats">
+                <div class="hero-stat"><b>6</b><span>laboratori in evidenza</span></div>
+                <div class="hero-stat"><b>2</b><span>verticali: Meccatronica e MedTech</span></div>
+                <div class="hero-stat"><b>12</b><span>mesi di accesso con il programma</span></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== RICERCA E INDUSTRIA ==================== -->
+    <section class="labs-section" id="campus">
+        <div class="section-container">
+            <div class="labs-content fade-in">
+                <div class="labs-text">
+                    <span class="section-label">Un asset strategico</span>
+                    <h2 class="section-title">Ricerca e industria nello stesso campus</h2>
+                    <p>Per una startup hardware il passaggio più delicato è quello tra l'idea e la prima Proof of Concept: servono attrezzature costose, test ripetibili e persone che sappiano interpretarne i risultati. Il programma rende disponibili proprio questi elementi, all'interno del campus di Lecco.</p>
+                    <p>I laboratori coprono robotica, sensoristica, metrologia, analisi del movimento e manifattura avanzata: ambiti che si allineano direttamente ai due verticali del programma. E, a partire dalle esigenze dei singoli progetti, è possibile attivare anche competenze e infrastrutture dell'intera rete di laboratori del Politecnico di Milano.</p>
+                </div>
+                <div class="labs-image">
+                    <img src="../images/laboratori.jpg" alt="Laboratori del Politecnico di Milano, Polo di Lecco" loading="lazy">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== LABORATORI ==================== -->
+    <section class="lab-list-section" id="laboratori">
+        <div class="section-container">
+            <span class="section-label">I laboratori</span>
+            <h2 class="section-title">Sei laboratori, competenze complementari</h2>
+            <div class="lab-filters" role="group" aria-label="Filtra per verticale">
+                <button type="button" data-filter="all" aria-pressed="true">Tutti</button>
+                <button type="button" data-filter="mecc" aria-pressed="false">⚙ Meccatronica</button>
+                <button type="button" data-filter="med" aria-pressed="false">🩺 MedTech</button>
+            </div>
+
+            <!-- VIDEO: incollare il link YouTube (o di un file .mp4) dentro data-video="" di ogni scheda.
+                 Se il campo resta vuoto la scheda mostra solo l'immagine, senza pulsante play. -->
+            <div class="lab-grid">
+                <article class="lab-card" data-v="mecc med">
+                    <button type="button" class="lab-media" data-video="" aria-label="Guarda il video di We-Cobot"><img src="../images/laboratori/we-cobot.jpg" alt="We-Cobot, Politecnico di Milano, Polo di Lecco" width="960" height="540" loading="lazy"><span class="play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span></button>
+                    <div class="lab-body">
+                        <h3>We-Cobot</h3>
+                        <div class="lab-area">Robotica collaborativa</div>
+                        <div class="lab-tags"><span class="lab-tag mecc">Meccatronica</span><span class="lab-tag med">MedTech</span></div>
+                        <p>Sviluppa robot pensati per lavorare accanto alle persone. Tra i progetti, Tiago, un robot per l'assistenza agli anziani in fase di sperimentazione in strutture italiane e svizzere, e la ricerca sugli esoscheletri per la riabilitazione e il supporto alle persone con disabilità: la frontiera della robotica indossabile.</p>
+                        <div class="lab-people">Luca Pozzi, Nicole Sanna, ricercatori</div>
+                    </div>
+                </article>
+
+                <article class="lab-card" data-v="mecc">
+                    <button type="button" class="lab-media" data-video="" aria-label="Guarda il video di IndexLab"><img src="../images/laboratori/indexlab.jpg" alt="IndexLab, Politecnico di Milano, Polo di Lecco" width="960" height="540" loading="lazy"><span class="play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span></button>
+                    <div class="lab-body">
+                        <h3>IndexLab</h3>
+                        <div class="lab-area">Robotica creativa e fabbricazione digitale</div>
+                        <div class="lab-tags"><span class="lab-tag mecc">Meccatronica</span></div>
+                        <p>Usa robotica e stampa 3D per realizzare oggetti e componenti strutturali che con i metodi tradizionali non sarebbero producibili, anche in ambito costruzioni. Collabora già con imprese che si rivolgono al Politecnico per trasformare le proprie idee in prodotti.</p>
+                        <div class="lab-people">Pierpaolo Ruttico, ricercatore</div>
+                    </div>
+                </article>
+
+                <article class="lab-card" data-v="mecc">
+                    <button type="button" class="lab-media" data-video="" aria-label="Guarda il video di MetroSpace"><img src="../images/laboratori/metrospace.jpg" alt="MetroSpace, Politecnico di Milano, Polo di Lecco" width="960" height="540" loading="lazy"><span class="play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span></button>
+                    <div class="lab-body">
+                        <h3>MetroSpace</h3>
+                        <div class="lab-area">Metrologia per ambienti estremi · Spacetech</div>
+                        <div class="lab-tags"><span class="lab-tag mecc">Meccatronica</span></div>
+                        <p>Progetta strumenti di misura per temperature, tempi, vibrazioni e forze, in grado di funzionare con precisione anche nello spazio e in altri ambienti complessi, dove l'affidabilità del dato è critica.</p>
+                        <div class="lab-people">Prof. Diego Scaccabarozzi, responsabile scientifico</div>
+                    </div>
+                </article>
+
+                <article class="lab-card" data-v="med">
+                    <button type="button" class="lab-media" data-video="" aria-label="Guarda il video di Human Performance Lab"><img src="../images/laboratori/human-performance-lab.jpg" alt="Human Performance Lab, Politecnico di Milano, Polo di Lecco" width="960" height="540" loading="lazy"><span class="play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span></button>
+                    <div class="lab-body">
+                        <h3>Human Performance Lab</h3>
+                        <div class="lab-area">Analisi del movimento umano</div>
+                        <div class="lab-tags"><span class="lab-tag med">MedTech</span></div>
+                        <p>Studia il movimento con strumentazione all'avanguardia, tra cui un simulatore immersivo che riproduce diverse condizioni di attività sportiva. Supporta il miglioramento della performance e, soprattutto, la prevenzione degli infortuni.</p>
+                        <div class="lab-people">Pietro Maver, tecnico di laboratorio</div>
+                    </div>
+                </article>
+
+                <article class="lab-card" data-v="med">
+                    <button type="button" class="lab-media" data-video="" aria-label="Guarda il video di SensibiLab"><img src="../images/laboratori/sensibilab.jpg" alt="SensibiLab, Politecnico di Milano, Polo di Lecco" width="960" height="540" loading="lazy"><span class="play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span></button>
+                    <div class="lab-body">
+                        <h3>SensibiLab</h3>
+                        <div class="lab-area">Sensori e sistemi biomedicali indossabili</div>
+                        <div class="lab-tags"><span class="lab-tag med">MedTech</span></div>
+                        <p>Integra tessile, elettronica e sensoristica in dispositivi indossabili che monitorano postura e movimento, rendono più accurata la diagnosi e sostengono riabilitazione e tecnologie assistive per persone con disabilità.</p>
+                        <div class="lab-people">Prof. Giuseppe Andreoni, responsabile scientifico</div>
+                    </div>
+                </article>
+
+                <article class="lab-card" data-v="mecc">
+                    <button type="button" class="lab-media" data-video="" aria-label="Guarda il video di Bioinspired System"><img src="../images/laboratori/bioinspired-system.jpg" alt="Bioinspired System, Politecnico di Milano, Polo di Lecco" width="960" height="540" loading="lazy"><span class="play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span></button>
+                    <div class="lab-body">
+                        <h3>Bioinspired System</h3>
+                        <div class="lab-area">Robotica soffice e propulsione in acqua</div>
+                        <div class="lab-tags"><span class="lab-tag mecc">Meccatronica</span></div>
+                        <p>Sviluppa robot ispirati alla natura, con superfici morbide e flessibili che si muovono in acqua in modo più efficiente. Una grande vasca interna permette di testare droni acquatici e pesci-robot.</p>
+                        <div class="lab-people">Giovanni Bianchi, ricercatore</div>
+                    </div>
+                </article>
+            </div>
+
+            <p class="lab-note">Questi sono solo alcuni dei laboratori del Polo di Lecco. Per l'elenco completo: <a href="https://www.polo-lecco.polimi.it/ricerca/laboratori-di-ricerca" target="_blank" rel="noopener">laboratori di ricerca del Polo di Lecco &rarr;</a></p>
+        </div>
+    </section>
+
+    <!-- ==================== LABORATORI CHE LAVORANO INSIEME ==================== -->
+    <section class="synergy-section" id="sinergie">
+        <div class="section-container">
+            <span class="section-label">Il vantaggio di Lecco</span>
+            <h2 class="section-title">Laboratori che lavorano insieme</h2>
+            <p class="section-description">Il tratto distintivo del polo lecchese è la vicinanza: i laboratori sono disposti nel campus per facilitare scambio e collaborazione. Una startup può così combinare più competenze sullo stesso progetto: quando le competenze si sommano, il risultato cresce più che proporzionalmente.</p>
+            <div class="offer-grid">
+                <div class="offer-card fade-in">
+                    <h3>Un progetto, più laboratori</h3>
+                    <p>Ad esempio, un dispositivo per la riabilitazione può unire sensori indossabili, robotica collaborativa e analisi del movimento.</p>
+                </div>
+                <div class="offer-card fade-in">
+                    <h3>Ricercatori come interlocutori</h3>
+                    <p>Accesso diretto a ricercatori e tecnici qualificati, con tutoraggio scientifico lungo tutto il percorso.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== CTA FINALE ==================== -->
+    <div class="cta-final" id="contatti">
+        <h2>Hai un'idea deep tech in Meccatronica o MedTech?</h2>
+        <p>Non chiediamo ricavi né un prodotto già sul mercato. 12 mesi di laboratori, housing e mentorship. Zero equity.</p>
+        <a href="https://app.notion.com/p/392c2bbbd80d80fd9c62ebd875db5631?pvs=106" target="_blank" rel="noopener" class="btn-cta" onclick="if(window.gtag)gtag('event','click_contattaci',{button_position:'laboratori_cta_finale'});">Contattaci &rarr;</a>
+        <p class="cta-press">Approfondisci: <a href="https://www.startupbusiness.it/i-laboratori-del-politecnico-per-le-startup-del-lake-como-venture-lab/174083/" target="_blank" rel="noopener">La visita ai laboratori su StartupBusiness &rarr;</a></p>
+    </div>
+
+    <!-- ==================== FOOTER ==================== -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-left">
+                <img src="../loghi/LakeComo_Logo_LCVL_White.png" alt="Lake Como Venture Lab" style="max-width: 200px; height: auto;">
+                <p>Un'iniziativa di Confindustria Lecco e Sondrio in partnership con il Polo Territoriale di Lecco – Politecnico di Milano e con la Camera di Commercio di Como-Lecco.</p>
+                <div style="display: flex; gap: 24px; margin-top: 12px; align-items: center;">
+                    <a href="https://www.confindustrialeccoesondrio.it" target="_blank"><img src="../images/confindustria-logo-white.png" alt="Confindustria Lecco e Sondrio" style="height: 40px; width: auto;"></a>
+                    <a href="https://www.polo-lecco.polimi.it" target="_blank"><img src="../images/polimi-logo-white.png" alt="Politecnico di Milano" style="height: 40px; width: auto; margin-left: 8px;"></a>
+                    <a href="https://www.comolecco.camcom.it" target="_blank"><img src="../images/cciaa-logo-white.png" alt="Camera di Commercio di Como-Lecco" style="height: 24px; width: auto;"></a>
+                </div>
+                <div style="display: flex; gap: 24px; margin-top: 16px; align-items: center; flex-wrap: wrap;">
+                    <a href="https://www.f6s.com/confindustria-lecco-e-sondrio/about" target="_blank"><img src="../images/F6S-network-partner-assets/White/F6S-network-partner-white.png" alt="F6S Network Partner" style="height: 36px; width: auto;"></a>
+                    <a href="https://www.startupbusiness.it" target="_blank"><img src="../images/Startupbusiness_Logo_Full_Color_Positive_.svg" alt="Startupbusiness" style="height: 24px; width: auto; filter: brightness(0) invert(1);"></a>
+                </div>
+            </div>
+            <div class="footer-socials">
+                <a href="https://www.linkedin.com/company/lake-como-venture-lab/" target="_blank" aria-label="LinkedIn">
+                    <svg viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                </a>
+                <a href="https://www.f6s.com/lake-como-venture-lab" target="_blank" aria-label="F6S">
+                    <img src="../images/F6S-brand-assets/White/F6S-logo-white.png" alt="F6S">
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ==================== VIDEO LIGHTBOX ==================== -->
+    <div class="lab-lightbox" id="lab-lightbox" role="dialog" aria-modal="true" aria-label="Video del laboratorio">
+        <button type="button" class="lab-lightbox-close" aria-label="Chiudi">&times;</button>
+        <div class="lab-lightbox-box"></div>
+    </div>
+
+    <!-- ==================== SCRIPTS ==================== -->
+    <script>
+        // Navbar scroll effect
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            navbar.classList.toggle('scrolled', window.scrollY > 50);
+        });
+
+        // Fade-in on scroll
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+        // Filtro laboratori per verticale
+        const filterButtons = document.querySelectorAll('.lab-filters button');
+        filterButtons.forEach(btn => {
+            btn.addEventListener('click', () => {
+                const f = btn.dataset.filter;
+                filterButtons.forEach(b => b.setAttribute('aria-pressed', b === btn));
+                document.querySelectorAll('.lab-card').forEach(card => {
+                    card.hidden = !(f === 'all' || card.dataset.v.split(' ').includes(f));
+                });
+            });
+        });
+
+        // Video dei laboratori: si carica solo all'apertura. YouTube via youtube-nocookie.com, altrimenti file .mp4
+        (function() {
+            const lightbox = document.getElementById('lab-lightbox');
+            const box = lightbox.querySelector('.lab-lightbox-box');
+            const closeBtn = lightbox.querySelector('.lab-lightbox-close');
+            let lastTrigger = null;
+
+            function embed(url) {
+                const yt = url.match(/(?:youtu\.be\/|[?&]v=|embed\/|shorts\/)([\w-]{11})/);
+                if (yt) {
+                    const iframe = document.createElement('iframe');
+                    iframe.src = 'https://www.youtube-nocookie.com/embed/' + yt[1] + '?autoplay=1&rel=0';
+                    iframe.title = 'Video del laboratorio';
+                    iframe.allow = 'autoplay; encrypted-media; picture-in-picture; fullscreen';
+                    iframe.allowFullscreen = true;
+                    return iframe;
+                }
+                const video = document.createElement('video');
+                video.src = url;
+                video.controls = true;
+                video.autoplay = true;
+                video.playsInline = true;
+                return video;
+            }
+
+            function openVideo(url, trigger) {
+                lastTrigger = trigger;
+                box.replaceChildren(embed(url));
+                lightbox.classList.add('open');
+                document.body.style.overflow = 'hidden';
+                closeBtn.focus();
+            }
+
+            function closeVideo() {
+                lightbox.classList.remove('open');
+                box.replaceChildren();
+                document.body.style.overflow = '';
+                if (lastTrigger) lastTrigger.focus();
+            }
+
+            document.querySelectorAll('.lab-media').forEach(media => {
+                const url = (media.dataset.video || '').trim();
+                if (url) {
+                    media.classList.add('has-video');
+                    media.addEventListener('click', () => openVideo(url, media));
+                } else {
+                    media.setAttribute('tabindex', '-1');
+                    media.removeAttribute('aria-label');
+                }
+            });
+
+            lightbox.addEventListener('click', e => {
+                if (e.target === lightbox || e.target === closeBtn) closeVideo();
+            });
+            document.addEventListener('keydown', e => {
+                if (e.key === 'Escape' && lightbox.classList.contains('open')) closeVideo();
+            });
+        })();
+    </script>
+
+    <!-- ==================== COOKIE BANNER + GA4 ==================== -->
+    <style>
+        #cookie-banner {
+            position: fixed;
+            bottom: 0; left: 0; right: 0;
+            background: #0f1e2d;
+            color: rgba(255,255,255,0.92);
+            padding: 24px 32px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 16px;
+            z-index: 9999;
+            font-family: 'Inter', sans-serif;
+            font-size: 0.9rem;
+            border-top: 3px solid #B8D8C8;
+            box-shadow: 0 -4px 32px rgba(0,0,0,0.4);
+        }
+        #cookie-banner p { margin: 0; flex: 1; min-width: 220px; line-height: 1.5; }
+        #cookie-banner a { color: #B8D8C8; text-decoration: underline; }
+        .cookie-btn {
+            padding: 10px 24px;
+            border-radius: 6px;
+            border: none;
+            cursor: pointer;
+            font-size: 0.9rem;
+            font-weight: 600;
+            transition: opacity 0.2s;
+            white-space: nowrap;
+        }
+        .cookie-btn:hover { opacity: 0.85; }
+        #cookie-accept { background: #B8D8C8; color: #0f1e2d; }
+        #cookie-reject { background: transparent; color: rgba(255,255,255,0.7); border: 1px solid rgba(255,255,255,0.4); }
+    </style>
+
+    <div id="cookie-banner" style="display:none;">
+        <p>Utilizziamo cookie analitici (Google Analytics) per migliorare l'esperienza sul sito. Puoi accettare o rifiutare.</p>
+        <div style="display:flex; gap:8px;">
+            <button class="cookie-btn" id="cookie-reject">Rifiuta</button>
+            <button class="cookie-btn" id="cookie-accept">Accetta</button>
+        </div>
+    </div>
+
+    <script>
+        (function() {
+            var consent = localStorage.getItem('ga-consent');
+            if (consent === 'granted') {
+                loadGA();
+            } else if (consent === null) {
+                document.getElementById('cookie-banner').style.display = 'flex';
+            }
+
+            document.getElementById('cookie-accept').addEventListener('click', function() {
+                localStorage.setItem('ga-consent', 'granted');
+                document.getElementById('cookie-banner').style.display = 'none';
+                loadGA();
+            });
+
+            document.getElementById('cookie-reject').addEventListener('click', function() {
+                localStorage.setItem('ga-consent', 'denied');
+                document.getElementById('cookie-banner').style.display = 'none';
+            });
+
+            function loadGA() {
+                var s = document.createElement('script');
+                s.async = true;
+                s.src = 'https://www.googletagmanager.com/gtag/js?id=G-EGFV44WLXZ';
+                document.head.appendChild(s);
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){ dataLayer.push(arguments); }
+                window.gtag = gtag;
+                gtag('js', new Date());
+                gtag('config', 'G-EGFV44WLXZ');
+            }
+        })();
+    </script>
+
+</body>
+</html>
