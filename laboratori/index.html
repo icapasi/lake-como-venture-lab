@@ -210,31 +210,6 @@
             color: white;
         }
 
-        .hero-stats {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 20px;
-            margin-top: 3rem;
-            max-width: 760px;
-        }
-
-        .hero-stat {
-            border-top: 2px solid var(--pastel-green-dark);
-            padding-top: 14px;
-        }
-
-        .hero-stat b {
-            display: block;
-            font-size: clamp(2.2rem, 4vw, 3rem);
-            font-weight: 800;
-            color: var(--dark-blue);
-            line-height: 1.1;
-        }
-
-        .hero-stat span {
-            font-size: 0.92rem;
-            color: var(--text-medium);
-        }
 
         /* ============ SECTION SHARED ============ */
         section {
@@ -754,11 +729,6 @@
             .lab-grid {
                 grid-template-columns: 1fr;
             }
-
-            .hero-stats {
-                grid-template-columns: 1fr;
-                gap: 16px;
-            }
         }
 
         /* ============ ANIMATIONS ============ */
@@ -795,11 +765,6 @@
             <div class="hero-ctas">
                 <a href="#laboratori" class="navbar-cta">Esplora i laboratori</a>
                 <a href="https://app.notion.com/p/392c2bbbd80d80fd9c62ebd875db5631?pvs=106" target="_blank" rel="noopener" class="navbar-cta outline" onclick="if(window.gtag)gtag('event','click_contattaci',{button_position:'laboratori_hero'});">Contattaci &rarr;</a>
-            </div>
-            <div class="hero-stats">
-                <div class="hero-stat"><b>6</b><span>laboratori in evidenza</span></div>
-                <div class="hero-stat"><b>2</b><span>verticali: Meccatronica e MedTech</span></div>
-                <div class="hero-stat"><b>12</b><span>mesi di accesso con il programma</span></div>
             </div>
         </div>
     </section>
