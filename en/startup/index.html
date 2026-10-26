@@ -485,10 +485,12 @@ footer { background: var(--text-dark); color: rgba(255, 255, 255, 0.7); padding:
 }
 .sp-logo {
     position: relative;
-    width: 120px;
-    height: 120px;
-    border-radius: 24px;
+    width: 100%;
+    max-width: 240px;
+    height: 104px;
+    border-radius: 20px;
     background: var(--gradient-1);
+    border: 1px solid rgba(168, 200, 232, 0.35);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -505,8 +507,9 @@ footer { background: var(--text-dark); color: rgba(255, 255, 255, 0.7); padding:
     height: 100%;
     object-fit: contain;
     background: var(--white);
-    padding: 14px;
+    padding: 18px 22px;
 }
+#fraido .sp-logo img { padding: 6px; }
 .sp-aside h2 {
     font-size: 1.5rem;
     font-weight: 800;
@@ -588,8 +591,10 @@ footer { background: var(--text-dark); color: rgba(255, 255, 255, 0.7); padding:
 .sp-press-card a:hover, .sp-press-card a:focus-visible { text-decoration: underline; }
 @media (max-width: 860px) {
     .sp-profile { grid-template-columns: 1fr; gap: 24px; padding: 28px 22px; }
-    .sp-aside { flex-direction: row; flex-wrap: wrap; align-items: center; column-gap: 16px; }
-    .sp-logo { width: 72px; height: 72px; font-size: 1.6rem; border-radius: 18px; margin-bottom: 0; }
+    .sp-aside { gap: 10px; }
+    .sp-logo { max-width: 260px; height: 84px; font-size: 1.6rem; border-radius: 16px; margin-bottom: 4px; }
+    .sp-logo img { padding: 14px 18px; }
+    #fraido .sp-logo img { padding: 5px; }
     .sp-cols { grid-template-columns: 1fr; gap: 20px; }
 }
 
@@ -650,7 +655,7 @@ footer { background: var(--text-dark); color: rgba(255, 255, 255, 0.7); padding:
                     <div class="sp-logo" aria-hidden="true">F<img src="../../images/startups/fraido.png" alt="" onerror="this.remove()"></div>
                     <span class="batch-tag medtech">MedTech</span>
                     <h2>Fraido</h2>
-                    <div class="batch-foot"></div>
+                    <div class="batch-foot"><a class="batch-foot-link" href="https://www.fraido.it" target="_blank" rel="noopener">fraido.it ↗</a></div>
                 </div>
                 <div class="sp-body">
                     <p class="sp-pitch">An intubation tube that adapts to the patient.</p>
