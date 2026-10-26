@@ -1,0 +1,812 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/png" href="../../loghi/LakeComo_Logo_Cerchio_White_LCVL.png">
+<title>Batch 01 startups · Lake Como Venture Lab</title>
+<meta name="description" content="CleanOS, Fraido and Prometheus Plasma Systems: the three deep tech startups in Lake Como Venture Lab&#x27;s first batch, across MedTech and Mechatronics.">
+<link rel="canonical" href="https://lakecomoventurelab.com/en/startup/">
+<link rel="alternate" hreflang="it" href="https://lakecomoventurelab.com/startup/">
+<link rel="alternate" hreflang="en" href="https://lakecomoventurelab.com/en/startup/">
+<meta property="og:title" content="Batch 01 startups · Lake Como Venture Lab">
+<meta property="og:description" content="CleanOS, Fraido and Prometheus Plasma Systems: the three deep tech startups in Lake Como Venture Lab&#x27;s first batch, across MedTech and Mechatronics.">
+<meta property="og:image" content="https://lakecomoventurelab.com/loghi/LakeComo_Logo_Cerchio_White_LCVL.png">
+<meta property="og:url" content="https://lakecomoventurelab.com/en/startup/">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://lakecomoventurelab.com/loghi/LakeComo_Logo_Cerchio_White_LCVL.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Caveat:wght@500;700&display=swap" rel="stylesheet">
+<style>
+:root { --pastel-green: #B8D8C8; --pastel-green-light: #D4EDE1; --pastel-green-dark: #7AB09A; --pastel-blue: #A8C8E8; --pastel-blue-light: #C8DDF0; --pastel-blue-dark: #6A9FCC; --dark-teal: #2C6E6A; --dark-blue: #1B4965; --text-dark: #1a2a3a; --text-medium: #3d5a6e; --text-light: #6b8599; --white: #ffffff; --off-white: #f5f9f7; --gradient-1: linear-gradient(135deg, #B8D8C8 0%, #A8C8E8 100%); --gradient-2: linear-gradient(135deg, #D4EDE1 0%, #C8DDF0 100%); }
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { font-family: Inter, sans-serif; color: var(--text-dark); line-height: 1.6; background: var(--white); }
+.navbar { position: fixed; top: 0; left: 0; right: 0; z-index: 1000; background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(12px); border-bottom: 1px solid rgba(168, 200, 232, 0.3); padding: 0 2rem; height: 70px; display: flex; align-items: center; justify-content: space-between; transition: box-shadow 0.3s; }
+.navbar.scrolled { box-shadow: rgba(0, 0, 0, 0.08) 0 2px 20px; }
+.navbar-logo { display: flex; align-items: center; gap: 10px; text-decoration: none; }
+.navbar-subtitle { font-size: 0.65rem; color: rgb(32, 72, 99); line-height: 1.4; text-align: center; flex: 1 1 0%; max-width: 500px; padding: 0 1rem; }
+.navbar-cta { display: inline-flex; align-items: center; gap: 8px; background: var(--dark-teal); color: white; padding: 10px 24px; border-radius: 50px; text-decoration: none; font-weight: 600; font-size: 0.9rem; transition: 0.3s; border: none; cursor: pointer; }
+.navbar-cta:hover { background: var(--dark-blue); transform: translateY(-1px); box-shadow: rgba(44, 110, 106, 0.3) 0 4px 15px; }
+.lang-switch { font-size: 0.8rem; font-weight: 600; color: var(--dark-teal); text-decoration: none; padding: 4px 12px; border: 1px solid var(--pastel-green); border-radius: 20px; transition: 0.3s; white-space: nowrap; margin-right: 4px; }
+.lang-switch:hover { background: var(--pastel-green-light); }
+section { padding: 80px 2rem; }
+.section-container { max-width: 1100px; margin: 0 auto; }
+.section-label { display: inline-block; font-size: 0.75rem; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--dark-teal); margin-bottom: 12px; background: var(--pastel-green-light); padding: 6px 16px; border-radius: 30px; }
+.section-title { font-size: clamp(1.6rem, 3vw, 2.4rem); font-weight: 800; color: var(--dark-blue); margin-bottom: 1rem; line-height: 1.2; }
+.section-description { font-size: 1.05rem; color: var(--text-medium); max-width: 900px; line-height: 1.7; margin-bottom: 2.5rem; }
+.phases-section { background: var(--white); }
+.phases-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 20px; margin-top: 2rem; }
+.phase-card { position: relative; background: var(--off-white); border-radius: 16px; padding: 28px 24px; border-top: 4px solid; transition: 0.3s; }
+.phase-card:nth-child(1) { border-color: var(--pastel-green); }
+.phase-card:nth-child(2) { border-color: var(--pastel-blue); }
+.phase-card:nth-child(3) { border-color: var(--pastel-green-dark); }
+.phase-card:nth-child(4) { border-color: var(--pastel-blue-dark); }
+.phase-card:hover { transform: translateY(-4px); box-shadow: rgba(0, 0, 0, 0.06) 0 8px 30px; }
+.phase-number { font-size: 0.75rem; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; color: var(--text-light); margin-bottom: 8px; }
+.phase-card h3 { font-size: 1.05rem; font-weight: 700; color: var(--dark-blue); margin-bottom: 10px; line-height: 1.3; }
+.phase-card p { font-size: 0.88rem; color: var(--text-medium); line-height: 1.6; }
+.cta-final { background: var(--dark-blue); padding: 80px 2rem; text-align: center; color: white; }
+.cta-final h2 { font-size: 2rem; font-weight: 800; margin-bottom: 1rem; }
+.cta-final p { font-size: 1.05rem; opacity: 0.85; margin-bottom: 2rem; max-width: 500px; margin-left: auto; margin-right: auto; }
+.cta-final .btn-cta { background: var(--pastel-green); color: var(--dark-blue); padding: 14px 36px; border-radius: 50px; text-decoration: none; font-weight: 700; font-size: 1.05rem; display: inline-flex; align-items: center; gap: 8px; transition: 0.3s; }
+.cta-final .btn-cta:hover { background: var(--white); transform: translateY(-2px); box-shadow: rgba(0, 0, 0, 0.2) 0 8px 30px; }
+footer { background: var(--text-dark); color: rgba(255, 255, 255, 0.7); padding: 40px 2rem; }
+.footer-content { max-width: 1100px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 20px; }
+.footer-left { display: flex; flex-direction: column; gap: 6px; }
+.footer-left p { font-size: 0.82rem; }
+.footer-socials { display: flex; gap: 12px; }
+.footer-socials a { width: 40px; height: 40px; border-radius: 50%; background: rgba(255, 255, 255, 0.1); display: flex; align-items: center; justify-content: center; text-decoration: none; transition: 0.3s; }
+.footer-socials a:hover { background: var(--pastel-green); }
+.footer-socials a svg { width: 18px; height: 18px; fill: white; }
+.footer-socials a:hover svg { fill: var(--dark-blue); }
+.footer-socials a img { width: 18px; height: 18px; object-fit: contain; }
+@media (max-width: 768px) {
+  .navbar { padding: 0 1rem; }
+  .navbar-subtitle { display: none; }
+  .phases-grid { grid-template-columns: 1fr 1fr; }
+  section { padding: 60px 1.5rem; }
+  .footer-content { flex-direction: column; text-align: center; }
+}
+@media (max-width: 480px) {
+  .phases-grid { grid-template-columns: 1fr; }
+}
+.fade-in { opacity: 0; transform: translateY(20px); transition: opacity 0.6s, transform 0.6s; }
+.fade-in.visible { opacity: 1; transform: translateY(0); }
+
+
+/* ============ BATCH 01 · STARTUP ============ */
+.batch-section {
+    background: var(--gradient-2);
+}
+.batch-stats {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1px;
+    background: rgba(27, 73, 101, 0.08);
+    border-radius: 20px;
+    overflow: hidden;
+    margin-bottom: 2.5rem;
+}
+.batch-stat {
+    background: rgba(255, 255, 255, 0.85);
+    padding: 22px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+.batch-stat strong {
+    font-size: clamp(1.6rem, 3vw, 2.1rem);
+    font-weight: 800;
+    color: var(--dark-blue);
+    line-height: 1;
+    font-variant-numeric: tabular-nums;
+}
+.batch-stat span {
+    font-size: 0.85rem;
+    color: var(--text-medium);
+}
+.batch-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
+}
+.batch-card {
+    background: var(--white);
+    border-radius: 20px;
+    padding: 32px 28px 28px;
+    border: 1px solid rgba(168, 200, 232, 0.25);
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    min-width: 0;
+    transition: transform 0.4s, box-shadow 0.4s, border-color 0.4s;
+}
+.batch-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 16px 48px rgba(0, 0, 0, 0.08);
+    border-color: var(--pastel-green);
+}
+.batch-card-head {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+.batch-logo {
+    position: relative;
+    flex-shrink: 0;
+    width: 64px;
+    height: 64px;
+    border-radius: 16px;
+    background: var(--gradient-1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.6rem;
+    font-weight: 800;
+    color: var(--dark-blue);
+    overflow: hidden;
+}
+.batch-logo img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    background: var(--white);
+    padding: 8px;
+}
+.batch-card h3 {
+    font-size: 1.2rem;
+    font-weight: 800;
+    color: var(--dark-blue);
+    line-height: 1.25;
+    margin-top: 6px;
+}
+.batch-tag {
+    display: inline-block;
+    font-size: 0.68rem;
+    font-weight: 600;
+    letter-spacing: 0.8px;
+    text-transform: uppercase;
+    padding: 3px 10px;
+    border-radius: 20px;
+}
+.batch-tag.medtech {
+    color: var(--dark-blue);
+    background: var(--pastel-blue-light);
+}
+.batch-tag.mecha {
+    color: var(--dark-teal);
+    background: var(--pastel-green-light);
+}
+.batch-pitch {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--dark-blue);
+    line-height: 1.4;
+}
+.batch-desc {
+    font-size: 0.9rem;
+    color: var(--text-medium);
+    line-height: 1.6;
+}
+.batch-team {
+    border-top: 1px solid rgba(168, 200, 232, 0.35);
+    padding-top: 14px;
+    margin-top: auto;
+}
+.batch-team dt {
+    font-size: 0.68rem;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: var(--text-light);
+    margin-bottom: 4px;
+}
+.batch-team dd {
+    font-size: 0.82rem;
+    color: var(--text-medium);
+    line-height: 1.5;
+    margin: 0;
+}
+.batch-foot a {
+    font-size: 0.88rem;
+    font-weight: 700;
+    color: var(--dark-teal);
+    text-decoration: none;
+    overflow-wrap: anywhere;
+}
+.batch-foot a:hover,
+.batch-foot a:focus-visible {
+    text-decoration: underline;
+}
+.batch-badge {
+    display: inline-block;
+    font-size: 0.78rem;
+    font-weight: 700;
+    color: var(--dark-blue);
+    background: var(--off-white);
+    border: 1px solid rgba(168, 200, 232, 0.5);
+    padding: 4px 12px;
+    border-radius: 20px;
+}
+.batch-cta {
+    margin-top: 2.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px 24px;
+    background: rgba(255, 255, 255, 0.7);
+    border-radius: 20px;
+    padding: 22px 28px;
+}
+.batch-cta p {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--dark-blue);
+    margin: 0;
+}
+.batch-cta a {
+    background: var(--dark-blue);
+    color: var(--white);
+    padding: 12px 28px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 0.95rem;
+    white-space: nowrap;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+.batch-cta a:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 30px rgba(27, 73, 101, 0.25);
+}
+@media (max-width: 900px) {
+    .batch-grid { grid-template-columns: 1fr; max-width: 560px; margin: 0 auto; }
+    .batch-stats { grid-template-columns: repeat(2, 1fr); }
+}
+@media (prefers-reduced-motion: reduce) {
+    .batch-card, .batch-cta a { transition: none; }
+    .batch-card:hover, .batch-cta a:hover { transform: none; }
+}
+
+/* ---- A) Badge Batch 01 nell'hero ---- */
+.batch-hero-badge {
+    display: inline-flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 6px 10px;
+    margin-bottom: 1.4rem;
+    padding: 8px 18px 8px 14px;
+    border-radius: 30px;
+    background: rgba(255, 255, 255, 0.75);
+    border: 1px solid rgba(44, 110, 106, 0.25);
+    color: var(--text-medium);
+    font-size: 0.85rem;
+    text-decoration: none;
+    transition: background 0.3s, border-color 0.3s;
+}
+.batch-hero-badge strong { color: var(--dark-teal); font-weight: 700; }
+.batch-hero-badge:hover,
+.batch-hero-badge:focus-visible { background: var(--white); border-color: var(--dark-teal); }
+.batch-live-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--dark-teal);
+    box-shadow: 0 0 0 0 rgba(44, 110, 106, 0.5);
+    animation: batch-pulse 2s infinite;
+}
+@keyframes batch-pulse {
+    0% { box-shadow: 0 0 0 0 rgba(44, 110, 106, 0.5); }
+    70% { box-shadow: 0 0 0 8px rgba(44, 110, 106, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(44, 110, 106, 0); }
+}
+.batch-intro a { color: var(--dark-teal); font-weight: 600; }
+
+/* ---- C) Indicatore sulla timeline delle fasi ---- */
+.phase-card.is-current {
+    background: var(--white);
+    box-shadow: 0 0 0 2px var(--dark-teal), 0 12px 36px rgba(27, 73, 101, 0.1);
+}
+.phase-now {
+    position: absolute;
+    top: -14px;
+    right: 16px;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: var(--dark-teal);
+    color: var(--white);
+    font-size: 0.68rem;
+    font-weight: 700;
+    letter-spacing: 0.8px;
+    text-transform: uppercase;
+    padding: 5px 12px;
+    border-radius: 20px;
+}
+.phase-now .batch-live-dot { background: var(--white); }
+
+/* ---- D) CTA finale Batch 02 ---- */
+.cta-final .cta-note {
+    margin-top: 1.5rem;
+    margin-bottom: 0;
+    font-size: 0.9rem;
+}
+.cta-final .cta-note a { color: var(--pastel-green); font-weight: 600; }
+
+/* ---- E) Waiting list ---- */
+.waitlist-form {
+    max-width: 720px;
+    margin: 0 auto;
+    text-align: left;
+}
+.waitlist-row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    gap: 12px;
+}
+.waitlist-field {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    flex: 1 1 180px;
+    min-width: 0;
+}
+.waitlist-field-email { flex: 2 1 260px; }
+.waitlist-field span {
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.75);
+}
+.waitlist-field input,
+.waitlist-field select {
+    width: 100%;
+    font: inherit;
+    font-size: 1rem;
+    color: var(--dark-blue);
+    background: var(--white);
+    border: 2px solid transparent;
+    border-radius: 50px;
+    padding: 12px 20px;
+    min-height: 50px;
+}
+.waitlist-field input:focus,
+.waitlist-field select:focus {
+    outline: none;
+    border-color: var(--pastel-green);
+}
+.waitlist-form .btn-cta {
+    border: none;
+    cursor: pointer;
+    font-family: inherit;
+    min-height: 50px;
+    justify-content: center;
+    flex: 0 0 auto;
+}
+.waitlist-form .btn-cta:disabled { opacity: 0.6; cursor: wait; }
+.waitlist-form .btn-cta:focus-visible { outline: 3px solid var(--white); outline-offset: 2px; }
+.waitlist-consent {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    margin-top: 14px;
+    font-size: 0.82rem;
+    line-height: 1.5;
+    color: rgba(255, 255, 255, 0.8);
+    cursor: pointer;
+}
+.waitlist-consent input {
+    width: 18px;
+    height: 18px;
+    margin-top: 2px;
+    flex-shrink: 0;
+    accent-color: var(--pastel-green);
+}
+.waitlist-consent a { color: var(--pastel-green); }
+.waitlist-hp { position: absolute; left: -9999px; width: 1px; height: 1px; opacity: 0; }
+.cta-final .waitlist-msg {
+    min-height: 1.5em;
+    margin: 12px 0 0;
+    max-width: none;
+    font-size: 0.95rem;
+    font-weight: 600;
+    opacity: 1;
+    color: var(--pastel-green);
+}
+.cta-final .waitlist-msg.is-error { color: #FFD3C4; }
+.waitlist-form.is-done .waitlist-row,
+.waitlist-form.is-done .waitlist-consent { display: none; }
+.waitlist-form.is-done .waitlist-msg {
+    text-align: center;
+    font-size: 1.1rem;
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 16px;
+    padding: 20px;
+}
+@media (max-width: 600px) {
+    .waitlist-form .btn-cta { width: 100%; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .batch-live-dot { animation: none; }
+}
+
+/* ============ PAGINA STARTUP BATCH 01 ============ */
+.sp-hero {
+    background: var(--gradient-2);
+    padding-top: 140px;
+}
+.sp-back {
+    display: inline-block;
+    margin-bottom: 1.5rem;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--dark-teal);
+    text-decoration: none;
+}
+.sp-back:hover, .sp-back:focus-visible { text-decoration: underline; }
+.sp-hero h1 {
+    font-size: clamp(2rem, 4.5vw, 3rem);
+    font-weight: 800;
+    color: var(--dark-blue);
+    line-height: 1.2;
+    margin-bottom: 1rem;
+    text-wrap: balance;
+}
+.sp-hero .batch-stats { margin-bottom: 0; }
+.sp-list { background: var(--white); }
+.sp-list .section-container {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+.sp-profile {
+    display: grid;
+    grid-template-columns: 240px 1fr;
+    gap: 40px;
+    background: var(--off-white);
+    border-radius: 24px;
+    padding: 40px;
+    scroll-margin-top: 100px;
+}
+.sp-aside {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+}
+.sp-logo {
+    position: relative;
+    width: 120px;
+    height: 120px;
+    border-radius: 24px;
+    background: var(--gradient-1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.6rem;
+    font-weight: 800;
+    color: var(--dark-blue);
+    overflow: hidden;
+    margin-bottom: 6px;
+}
+.sp-logo img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    background: var(--white);
+    padding: 14px;
+}
+.sp-aside h2 {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: var(--dark-blue);
+    line-height: 1.2;
+}
+.sp-body { min-width: 0; display: flex; flex-direction: column; gap: 22px; }
+.sp-pitch {
+    font-size: clamp(1.15rem, 2vw, 1.4rem);
+    font-weight: 700;
+    color: var(--dark-blue);
+    line-height: 1.35;
+    text-wrap: balance;
+}
+.sp-cols {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 28px;
+}
+.sp-cols h3,
+.sp-team dt {
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: var(--dark-teal);
+    margin-bottom: 8px;
+}
+.sp-cols p {
+    font-size: 0.95rem;
+    color: var(--text-medium);
+    line-height: 1.65;
+}
+.sp-team {
+    border-top: 1px solid rgba(168, 200, 232, 0.4);
+    padding-top: 18px;
+}
+.sp-team dd { margin: 0; font-size: 0.95rem; color: var(--text-dark); line-height: 1.55; }
+.sp-chips {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+.sp-chips li {
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--dark-blue);
+    background: var(--white);
+    border: 1px solid rgba(168, 200, 232, 0.5);
+    padding: 5px 14px;
+    border-radius: 20px;
+}
+.sp-phases { background: var(--off-white); }
+.sp-press { background: var(--white); }
+.sp-press-card {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px 32px;
+    background: var(--gradient-2);
+    border-radius: 20px;
+    padding: 28px 32px;
+}
+.sp-press-card p {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--dark-blue);
+    margin: 0;
+    flex: 1 1 320px;
+}
+.sp-press-card a {
+    font-weight: 700;
+    color: var(--dark-teal);
+    text-decoration: none;
+    white-space: nowrap;
+}
+.sp-press-card a:hover, .sp-press-card a:focus-visible { text-decoration: underline; }
+@media (max-width: 860px) {
+    .sp-profile { grid-template-columns: 1fr; gap: 24px; padding: 28px 22px; }
+    .sp-aside { flex-direction: row; flex-wrap: wrap; align-items: center; column-gap: 16px; }
+    .sp-logo { width: 72px; height: 72px; font-size: 1.6rem; border-radius: 18px; margin-bottom: 0; }
+    .sp-cols { grid-template-columns: 1fr; gap: 20px; }
+}
+
+#cookie-banner { position: fixed; bottom: 0; left: 0; right: 0; background: #0f1e2d; color: rgba(255,255,255,0.92); padding: 24px 32px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 16px; z-index: 9999; font-family: 'Inter', sans-serif; font-size: 0.9rem; border-top: 3px solid #B8D8C8; box-shadow: 0 -4px 32px rgba(0,0,0,0.4); }
+#cookie-banner p { margin: 0; flex: 1; min-width: 220px; line-height: 1.5; }
+.cookie-btn { padding: 10px 24px; border-radius: 6px; border: none; cursor: pointer; font-size: 0.9rem; font-weight: 600; transition: opacity 0.2s; white-space: nowrap; }
+.cookie-btn:hover { opacity: 0.85; }
+#cookie-accept { background: #B8D8C8; color: #0f1e2d; }
+#cookie-reject { background: transparent; color: rgba(255,255,255,0.7); border: 1px solid rgba(255,255,255,0.4); }
+</style>
+</head>
+<body>
+    <nav class="navbar" id="navbar">
+        <a href="../" class="navbar-logo">
+            <img src="../../loghi/LakeComo_Logo_LCVL.png" alt="Lake Como Venture Lab" style="height: 63px; width: auto;">
+        </a>
+        <span class="navbar-subtitle">An initiative by Confindustria Lecco e Sondrio in partnership with the Polo Territoriale di Lecco – Politecnico di Milano and Camera di Commercio di Como-Lecco.</span>
+        <a href="../../startup/" class="lang-switch">IT</a>
+        <a href="mailto:startup@lakecomoventurelab.com?subject=Contact%20from%20the%20website" class="navbar-cta" onclick="if(window.gtag)gtag('event','click_contattaci',{button_position:'navbar'});">Contact us →</a>
+    </nav>
+
+    <section class="sp-hero">
+        <div class="section-container">
+            <a class="sp-back" href="../">← Back to home</a><br>
+            <span class="section-label">Batch 01 · 2026/2027</span>
+            <h1>Meet our first batch</h1>
+            <p class="section-description">Three teams chosen by the Selection Panel from 59 applications from Italy and abroad. Since autumn 2026 they have been working in the labs of Politecnico di Milano&#x27;s Lecco Campus to take their technology from prototype to Proof of Concept.</p>
+            <div class="batch-stats">
+                <div class="batch-stat"><strong>59</strong><span>applications</span></div>
+                <div class="batch-stat"><strong>38%</strong><span>from abroad</span></div>
+                <div class="batch-stat"><strong>8</strong><span>Pitch Day finalists</span></div>
+                <div class="batch-stat"><strong>3</strong><span>startups selected</span></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="sp-list">
+        <div class="section-container">
+            <article class="sp-profile fade-in" id="cleanos">
+                <div class="sp-aside">
+                    <div class="sp-logo" aria-hidden="true">C<img src="../../images/startups/cleanos.png" alt="" onerror="this.remove()"></div>
+                    <span class="batch-tag medtech">MedTech</span>
+                    <h2>CleanOS</h2>
+                    <div class="batch-foot"><a class="batch-foot-link" href="https://thecleanos.com" target="_blank" rel="noopener">thecleanos.com ↗</a></div>
+                </div>
+                <div class="sp-body">
+                    <p class="sp-pitch">Preventing oral disease with devices made to fit.</p>
+                    <div class="sp-cols">
+                        <div><h3>The problem</h3><p>Oral diseases are among the most common in the world and largely preventable. Yet daily hygiene still relies on standard toothbrushes and each person&#x27;s technique.</p></div>
+                        <div><h3>The solution</h3><p>Smart Brush: one handle and two brush heads, one for the upper arch and one for the lower, shaped on each person&#x27;s mouth from a dental scan, an at-home impression kit or the dentist&#x27;s impression. It cleans the whole arch in seconds.</p></div>
+                    </div>
+                    <dl class="sp-team"><dt>Team</dt><dd>Giovanni Tuccari (CEO), Pietro Pastore (CMO, dentist), Francesco Anzalone (CTO, robotics engineer)</dd></dl>
+                    <ul class="sp-chips"><li>Founded in 2024</li><li>Based in Milan</li></ul>
+                </div>
+            </article>
+            <article class="sp-profile fade-in" id="fraido">
+                <div class="sp-aside">
+                    <div class="sp-logo" aria-hidden="true">F<img src="../../images/startups/fraido.png" alt="" onerror="this.remove()"></div>
+                    <span class="batch-tag medtech">MedTech</span>
+                    <h2>Fraido</h2>
+                    <div class="batch-foot"></div>
+                </div>
+                <div class="sp-body">
+                    <p class="sp-pitch">An intubation tube that adapts to the patient.</p>
+                    <div class="sp-cols">
+                        <div><h3>The problem</h3><p>Difficult intubations often need several devices in sequence, first a guide and then the tube. Each step adds time, and in an emergency seconds count.</p></div>
+                        <div><h3>The solution</h3><p>An endotracheal tube with an adjustable diameter. It goes in thin, like a guide, and once in place it is mechanically expanded to the size that fits the patient&#x27;s trachea: one device instead of two.</p></div>
+                    </div>
+                    <dl class="sp-team"><dt>Team</dt><dd>Antonio Maria Vizioli (emergency nurse), Elia Fregolese (materials engineer)</dd></dl>
+                    <ul class="sp-chips"><li>Patented device</li><li>Forbes Under 30 · 2026</li><li>Advisors from 14 hospitals in Italy and the UK</li></ul>
+                </div>
+            </article>
+            <article class="sp-profile fade-in" id="prometheus">
+                <div class="sp-aside">
+                    <div class="sp-logo" aria-hidden="true">P<img src="../../images/startups/prometheus.png" alt="" onerror="this.remove()"></div>
+                    <span class="batch-tag mecha">Mechatronics</span>
+                    <h2>Prometheus Plasma Systems</h2>
+                    <div class="batch-foot"><a class="batch-foot-link" href="https://www.prometheusplasmasystems.com" target="_blank" rel="noopener">prometheusplasmasystems.com ↗</a></div>
+                </div>
+                <div class="sp-body">
+                    <p class="sp-pitch">Plasma technology, from industry to nuclear fusion.</p>
+                    <div class="sp-cols">
+                        <div><h3>The problem</h3><p>Industrial vacuum pumps rely on rotating parts. Bearings wear out, vibration and magnetic fields limit where they can be used, and every stoppage has a cost.</p></div>
+                        <div><h3>The solution</h3><p>A patented architecture with coaxial electrodes and electromagnetic flow control that moves gas with no moving parts. It leads to three product lines: plasma diagnostics and power systems, solid-state vacuum pumps and, in the long run, a fusion reactor.</p></div>
+                    </div>
+                    <dl class="sp-team"><dt>Team</dt><dd>Founders with experience at Thales Alenia Space and a PhD in plasma physics from Max Planck IPP</dd></dl>
+                    <ul class="sp-chips"><li>Patent granted · PCT pending</li><li>Plasma diagnostics: TRL 8</li><li>Gamma-5 vacuum pump: TRL 4</li></ul>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <section class="phases-section sp-phases" id="journey">
+        <div class="section-container">
+            <span class="section-label">Where they are</span>
+            <h2 class="section-title">The Batch 01 journey</h2>
+            <p class="section-description">Twelve months in four phases, from October 2026 to the final Demo Day.</p>
+
+            <div class="phases-grid">
+                <div class="phase-card fade-in is-current">
+                    <span class="phase-now"><span class="batch-live-dot" aria-hidden="true"></span>Batch 01 is here</span>
+                    <div class="phase-number">Phase 1 · Months 0-3</div>
+                    <h3>Technology Validation and Setup</h3>
+                    <p>Onboarding, intensive lab experimentation, proof-of-concept validation, and first scientific checkpoint.</p>
+                </div>
+                <div class="phase-card fade-in">
+                    <div class="phase-number">Phase 2 · Months 3-6</div>
+                    <h3>Tech-Market Convergence</h3>
+                    <p>Market discovery with early adopters, demonstrable prototype development, initial tests with industrial partners, and value proposition definition.</p>
+                </div>
+                <div class="phase-card fade-in">
+                    <div class="phase-number">Phase 3 · Months 6-9</div>
+                    <h3>Market Preparation and Scaling</h3>
+                    <p>Pilot projects with customers, unit economics validation, IP strategy consolidation, and regulatory compliance.</p>
+                </div>
+                <div class="phase-card fade-in">
+                    <div class="phase-number">Phase 4 · Months 9-12</div>
+                    <h3>Investment Readiness and Demo Day</h3>
+                    <p>Pitch deck and data room finalization, financial projections, investor preparation with mock sessions, and final Demo Day.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="cta-final">
+        <h2>Want to work with the Batch 01 startups?</h2>
+        <p>We are looking for local companies to run tests and pilot projects with them, and investors interested in their next rounds.</p>
+        <a href="mailto:startup@lakecomoventurelab.com?subject=Working%20with%20the%20Batch%2001%20startups" class="btn-cta" onclick="if(window.gtag)gtag('event','click_contattaci',{button_position:'pagina_startup'});">Get in touch →</a>
+        <p class="cta-note">Want to apply for Batch 02? <a href="../#apply">Leave your email</a>: applications open in May 2027.</p>
+    </div>
+
+    <section class="sp-press">
+        <div class="section-container">
+            <span class="section-label">Press</span>
+            <div class="sp-press-card">
+                <p>StartupBusiness on the Pitch Day and the selected startups</p>
+                <a href="https://www.startupbusiness.it/en/lake-como-venture-lab-selects-cleanos-fraido-and-prometheus-plasma/187077/" target="_blank" rel="noopener">Read the article ↗</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-left">
+                <img src="../../loghi/LakeComo_Logo_LCVL_White.png" alt="Lake Como Venture Lab" style="max-width: 200px; height: auto;">
+                <p>An initiative by Confindustria Lecco e Sondrio in partnership with the Polo Territoriale di Lecco – Politecnico di Milano and Camera di Commercio di Como-Lecco.</p>
+                <div style="display: flex; gap: 24px; margin-top: 12px; align-items: center;">
+                    <a href="https://www.confindustrialeccoesondrio.it" target="_blank"><img src="../../images/confindustria-logo-white.png" alt="Confindustria Lecco e Sondrio" style="height: 40px; width: auto;"></a>
+                    <a href="https://www.polo-lecco.polimi.it" target="_blank"><img src="../../images/polimi-logo-white.png" alt="Politecnico di Milano" style="height: 40px; width: auto; margin-left: 8px;"></a>
+                    <a href="https://www.comolecco.camcom.it" target="_blank"><img src="../../images/cciaa-logo-white.png" alt="Camera di Commercio di Como-Lecco" style="height: 24px; width: auto;"></a>
+                </div>
+                <div style="display: flex; gap: 24px; margin-top: 16px; align-items: center; flex-wrap: wrap;">
+                    <a href="https://www.f6s.com/confindustria-lecco-e-sondrio/about" target="_blank"><img src="../../images/F6S-network-partner-assets/White/F6S-network-partner-white.png" alt="F6S Network Partner" style="height: 36px; width: auto;"></a>
+                    <a href="https://www.startupbusiness.it" target="_blank"><img src="../../images/Startupbusiness_Logo_Full_Color_Positive_.svg" alt="Startupbusiness" style="height: 24px; width: auto; filter: brightness(0) invert(1);"></a>
+                </div>
+            </div>
+            <div class="footer-socials">
+                <a href="https://www.linkedin.com/company/lake-como-venture-lab/" target="_blank" aria-label="LinkedIn">
+                    <svg viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"></path></svg>
+                </a>
+                <a href="https://www.f6s.com/lake-como-venture-lab" target="_blank" aria-label="F6S">
+                    <img src="../../images/F6S-brand-assets/White/F6S-logo-white.png" alt="F6S">
+                </a>
+            </div>
+        </div>
+    </footer>
+
+
+    <div id="cookie-banner" style="display:none;">
+        <p>We use analytics cookies (Google Analytics) to improve your experience on the site. You can accept or decline.</p>
+        <div style="display:flex; gap:8px;">
+            <button class="cookie-btn" id="cookie-reject">Decline</button>
+            <button class="cookie-btn" id="cookie-accept">Accept</button>
+        </div>
+    </div>
+
+    <script>
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            navbar.classList.toggle('scrolled', window.scrollY > 50);
+        });
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) entry.target.classList.add('visible');
+            });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+    </script>
+    <script>
+        (function() {
+            var consent = localStorage.getItem('ga-consent');
+            if (consent === 'granted') {
+                loadGA();
+            } else if (consent === null) {
+                document.getElementById('cookie-banner').style.display = 'flex';
+            }
+            document.getElementById('cookie-accept').addEventListener('click', function() {
+                localStorage.setItem('ga-consent', 'granted');
+                document.getElementById('cookie-banner').style.display = 'none';
+                loadGA();
+            });
+            document.getElementById('cookie-reject').addEventListener('click', function() {
+                localStorage.setItem('ga-consent', 'denied');
+                document.getElementById('cookie-banner').style.display = 'none';
+            });
+            function loadGA() {
+                var s = document.createElement('script');
+                s.async = true;
+                s.src = 'https://www.googletagmanager.com/gtag/js?id=G-EGFV44WLXZ';
+                document.head.appendChild(s);
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){ dataLayer.push(arguments); }
+                window.gtag = gtag;
+                gtag('js', new Date());
+                gtag('config', 'G-EGFV44WLXZ');
+            }
+        })();
+    </script>
+</body>
+</html>
